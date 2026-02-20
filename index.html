@@ -1,89 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Missão Peru - Tacna</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="manifest" href="manifest.json"/>
-  <link rel="icon" href="icon-app.png"/>
+  <link rel="manifest" href="manifest.json">
   <style>
-    body { font-family: system-ui; }
-    .nav-active { border-bottom: 3px solid #E8B923; color: #E8B923; }
+    body { font-family: system-ui, sans-serif; scroll-behavior: smooth; }
+    .nav-active { color: #E8B923; border-bottom: 3px solid #E8B923; }
+    .section { transition: all 0.3s ease-in-out; }
   </style>
 </head>
-<body class="bg-[#0A2540] text-white min-h-screen pb-20">
+<body class="bg-[#0A2540] text-white min-h-screen pb-24">
 
-  <!-- HEADER -->
-  <div class="bg-gradient-to-r from-[#15803D] to-[#0A2540] py-6 text-center">
-    <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-48 h-48 rounded-full border-4 border-[#E8B923] shadow-2xl"/>
-    <h1 class="text-4xl font-bold text-[#E8B923] mt-4">Missão Peru</h1>
-    <p class="text-[#15803D] text-xl">Tacna • Um Chamado para os que têm Coragem de Dizer SIM</p>
+  <div class="bg-gradient-to-r from-[#15803D] via-[#0A2540] to-[#15803D] py-8 text-center shadow-lg">
+    <div class="relative inline-block">
+        <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-48 h-48 rounded-full border-4 border-[#E8B923] shadow-2xl object-cover">
+    </div>
+    <h1 class="text-4xl font-bold text-[#E8B923] mt-4 tracking-tight">Missão Peru</h1>
+    <p class="text-white/90 text-lg mt-1 px-4">Tacna • Um Chamado para os que têm Coragem</p>
   </div>
 
-  <!-- NAVEGAÇÃO INFERIOR -->
-  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-2 z-50">
-    <button onclick="showSection('home')" class="nav-active px-4 py-1 text-sm">🏠 Início</button>
-    <button onclick="showSection('doar')" class="px-4 py-1 text-sm">💰 Doar</button>
-    <button onclick="showSection('oracao')" class="px-4 py-1 text-sm">🙏 Oração</button>
-    <button onclick="showSection('palavra')" class="px-4 py-1 text-sm">📖 Palavra</button>
-    <button onclick="showSection('quiz')" class="px-4 py-1 text-sm">❓ Quiz</button>
+  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-3 z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.3)]">
+    <button onclick="showSection('home')" class="flex flex-col items-center px-3 text-[#E8B923]">🏠<span class="text-[10px] uppercase mt-1">Início</span></button>
+    <button onclick="showSection('doar')" class="flex flex-col items-center px-3 text-white/70">💰<span class="text-[10px] uppercase mt-1">Doar</span></button>
+    <button onclick="showSection('oracao')" class="flex flex-col items-center px-3 text-white/70">🙏<span class="text-[10px] uppercase mt-1">Oração</span></button>
+    <button onclick="showSection('palavra')" class="flex flex-col items-center px-3 text-white/70">📖<span class="text-[10px] uppercase mt-1">Palavra</span></button>
+    <button onclick="showSection('quiz')" class="flex flex-col items-center px-3 text-white/70">❓<span class="text-[10px] uppercase mt-1">Quiz</span></button>
   </div>
 
-  <!-- SEÇÃO INÍCIO -->
-  <div id="home" class="section p-6">
-    <div class="max-w-2xl mx-auto">
-      <p class="text-lg leading-relaxed mb-6">
-        Desde 1993 Deus vem escrevendo nossa história. Em 1997, numa visão clara, um homem de roupa colorida disse “quéchua” e apontou para uma cidade cercada por montanhas: era o Peru. Fomos em 1999 e 2008. A chama nunca apagou. Agora o Senhor está abrindo as portas para ficarmos em <strong>Tacna</strong> para sempre – gastando e sendo desgastados pelo Reino de Deus!
+  <div id="home" class="section p-6 max-w-2xl mx-auto">
+    <div class="bg-[#15803D]/10 border border-[#15803D]/30 p-6 rounded-2xl shadow-inner">
+      <h2 class="text-[#E8B923] text-xl font-bold mb-4">Nossa História</h2>
+      <p class="text-base leading-relaxed text-gray-200">
+        Desde 1993 Deus vem escrevendo nossa história. Em 1997, numa visão clara, a direção foi dada: **Tacna, Peru**. <br><br>
+        Fomos em 1999 e 2008. Agora o Senhor abre as portas para o estabelecimento definitivo. Queremos gastar e ser gastos pelo Reino!
       </p>
-      <div class="bg-[#15803D]/20 border border-[#15803D] p-6 rounded-3xl text-center">
-        <p class="text-[#E8B923] text-2xl font-bold">Lucas 10:2</p>
-        <p class="italic">"A seara é grande, mas os trabalhadores são poucos. Orai, pois, ao Senhor da seara..."</p>
+      <div class="mt-6 p-4 border-l-4 border-[#E8B923] bg-black/20 italic">
+        "A seara é grande, mas os trabalhadores são poucos..." <br>
+        <span class="font-bold text-[#E8B923]">— Lucas 10:2</span>
       </div>
-      <button onclick="showSection('doar')" class="mt-8 w-full bg-[#E8B923] hover:bg-yellow-400 text-[#0A2540] font-bold py-5 rounded-3xl text-xl shadow-xl">QUERO PARTICIPAR DA MISSÃO!</button>
+    </div>
+    <button onclick="showSection('doar')" class="mt-8 w-full bg-[#E8B923] hover:bg-yellow-500 text-[#0A2540] font-black py-5 rounded-xl text-xl transition-transform active:scale-95 shadow-xl">
+        QUERO APOIAR A MISSÃO
+    </button>
+  </div>
+
+  <div id="doar" class="section hidden p-6 max-w-md mx-auto text-center">
+    <h2 class="text-3xl font-bold text-[#E8B923] mb-6">Sua Oferta em Tacna</h2>
+    <div class="bg-white/5 border border-white/10 rounded-3xl p-6">
+      <div class="bg-[#15803D] p-6 rounded-2xl mb-6 shadow-lg">
+        <p class="text-xs font-bold uppercase tracking-widest text-white/80">Chave PIX (CPF)</p>
+        <p id="pixKey" class="text-2xl font-mono font-bold mt-2">05475258856</p>
+        <button onclick="copyPix()" class="mt-4 bg-white text-[#0A2540] px-6 py-2 rounded-full font-bold text-sm hover:bg-[#E8B923] transition-colors">
+            COPIAR CHAVE
+        </button>
+      </div>
+      <img src="qr-pix.png" class="w-48 h-48 mx-auto bg-white p-2 rounded-xl shadow-lg mb-4" alt="QR Code">
+      <p class="text-gray-300 text-sm">Favorecido: Antonio Luiz S. Nogueira</p>
     </div>
   </div>
 
-  <!-- SEÇÃO DOAR (mais importante) -->
-  <div id="doar" class="section hidden p-6">
-    <div class="max-w-md mx-auto bg-white/10 rounded-3xl p-8 text-center">
-      <h2 class="text-3xl font-bold text-[#E8B923] mb-6">Faça sua semente hoje</h2>
-      
-      <div class="bg-[#15803D] text-white p-6 rounded-2xl mb-8">
-        <p class="text-sm">PIX IMEDIATO</p>
-        <p class="text-2xl font-bold mt-2">054.752.588-56</p>
-        <button onclick="copyPix()" class="mt-4 bg-white text-[#0A2540] px-8 py-3 rounded-full font-bold">COPIAR CHAVE PIX</button>
-      </div>
-
-      <p class="text-[#E8B923] text-xl mb-6">R$ 30 = 1 dia de alimento e evangelismo em Tacna<br>R$ 100 = 1 Bíblia + material para uma família</p>
-
-      <!-- QR Code - você vai trocar depois -->
-      <div class="bg-white p-4 rounded-2xl inline-block">
-        <img id="qr-pix" src="https://via.placeholder.com/200x200/15803D/ffffff?text=QR+PIX" class="w-48 h-48" alt="QR Code Pix"/>
-      </div>
-      <p class="text-xs mt-2 text-gray-400">Escaneie ou copie a chave acima</p>
-
-      <a href="https://vakinha.com.br" target="_blank" class="mt-8 block w-full bg-[#15803D] py-4 rounded-3xl text-white font-bold">Quero criar compromisso mensal de 12 meses</a>
+  <div id="oracao" class="section hidden p-6 max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold text-[#E8B923] mb-6 border-b border-[#E8B923]/30 pb-2">Motivos de Intercessão</h2>
+    <div class="grid gap-4">
+        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🛡️ Proteção espiritual na fronteira</div>
+        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🏠 Aluguel da base missionária</div>
+        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🛂 Vistos e documentação legal</div>
+        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🥖 Provisão diária e sustento</div>
     </div>
   </div>
 
-  <!-- Outras seções (oração, palavra, quiz) resumidas por brevidade - posso expandir mais depois -->
-  <!-- ... (o código completo tem todas) ... -->
+  <div id="palavra" class="section hidden p-6 max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold text-[#E8B923] mb-6">Meditação Missionária</h2>
+    <div class="space-y-4">
+        <div class="bg-gradient-to-br from-[#15803D]/20 to-transparent p-6 rounded-2xl border border-white/10">
+            <p class="italic">"Ide por todo o mundo e pregai o evangelho a toda criatura."</p>
+            <p class="text-right font-bold mt-2 text-[#E8B923]">Marcos 16:15</p>
+        </div>
+    </div>
+  </div>
+
+  <div id="quiz" class="section hidden p-6 max-w-md mx-auto">
+    <div class="bg-white/10 p-8 rounded-3xl text-center shadow-2xl border border-white/10">
+        <div id="quiz-box">
+            <h2 id="pergunta" class="text-xl font-bold mb-6 italic">Carregando pergunta...</h2>
+            <div id="opcoes" class="space-y-3"></div>
+            <p id="resultado" class="mt-6 font-bold text-[#E8B923]"></p>
+        </div>
+    </div>
+  </div>
 
   <script>
-    function showSection(section) {
+    function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
-      document.getElementById(section).classList.remove('hidden');
-      document.querySelectorAll('button').forEach(b => b.classList.remove('nav-active'));
+      document.getElementById(id).classList.remove('hidden');
+      
+      // Estilização dos botões (UX Feedbacks)
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('text-[#E8B923]'));
     }
+
     function copyPix() {
-      navigator.clipboard.writeText('05475258856');
-      alert('✅ Chave Pix copiada! Deus te abençoe!');
+      const el = document.createElement('textarea');
+      el.value = '05475258856';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      alert('✅ Chave PIX copiada! Que Deus prospere sua vida!');
     }
-    // Service Worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-    }
-  </script>
-</body>
-</html>
+
+    // Lógica do Quiz Missionário
+    const perguntas = [
+        {q: "Em qual país fica a cidade de Tacna?", a: ["Peru", "Chile", "Bolívia"], c: 0},
+        {q: "Qual o foco do projeto em Tacna?", a: ["Turismo", "Missões e Evangelismo", "Comércio"], c: 1}
+    ];
+    let atual = 0;
+
+    function renderQuiz() {
+        const p = perguntas[atual];
+        document.getElementById('pergunta').innerText = p.q;
+        const op = document.getElementById('opcoes');
+        op.innerHTML = '';
+        p.a.forEach((txt, i) => {
+            const b = document.createElement('button');
+            b.className = "w-full bg-white/10 py-3 rounded-xl hover:bg-[#15803D] transition-all";
+            b.innerText = txt;
+            b.onclick = () => {
+                if(i === p.c) document.getElementById('resultado').innerText = "Correto! 🔥";
+                else document.getElementById('resultado').innerText = "Tente novamente! 🙏";
+                setTimeout(() => {
