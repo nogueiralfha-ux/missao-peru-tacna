@@ -1,112 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missão Peru - Tacna</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .section { display: none; }
-        .active { display: block; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão Peru - Tacna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; scroll-behavior: smooth; }
+    .section { display: none; }
+    .active { display: block; }
+  </style>
 </head>
 <body class="bg-[#0A2540] text-white min-h-screen pb-24">
 
-    <div class="bg-gradient-to-b from-[#15803D] to-[#0A2540] py-10 text-center shadow-lg">
-        <img src="logo-missao-peru.png" alt="Logo" class="mx-auto w-32 h-32 rounded-full border-4 border-[#E8B923] mb-4">
-        <h1 class="text-2xl font-bold text-[#E8B923]">Missão Peru - Tacna</h1>
-        <p class="text-sm text-gray-300">APOIO MENSAL 12 MESES</p>
-    </div>
+  <div class="bg-gradient-to-b from-[#15803D] to-[#0A2540] py-8 text-center shadow-lg">
+    <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-32 h-32 rounded-full border-4 border-[#E8B923] mb-4 shadow-2xl">
+    <h1 class="text-2xl font-bold text-[#E8B923]">Missão Peru - Tacna</h1>
+    <p class="text-xs text-white/70 uppercase tracking-widest">Tecnologia a Serviço do Reino</p>
+  </div>
 
-    <div id="home" class="section active p-6 text-center">
-        <h2 class="text-[#E8B923] text-xl font-bold mb-4">Palavra do Dia</h2>
-        <div class="bg-white/10 p-8 rounded-2xl border-l-4 border-[#15803D] mb-6">
-            <p class="italic text-lg">"Ide por todo o mundo e pregai o evangelho..."</p>
-        </div><div id="oracao" class="section hidden p-6">
-    <h2 class="text-[#E8B923] text-2xl font-bold mb-6 text-center underline">Clamor por Tacna</h2>
+  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-4 z-50 shadow-2xl">
+    <button onclick="showSection('home')" class="flex flex-col items-center"><span class="text-[10px] font-bold text-[#E8B923]">INÍCIO</span></button>
+    <button onclick="showSection('doar')" class="flex flex-col items-center"><span class="text-[10px] font-bold text-white/70">DOAR</span></button>
+    <button onclick="showSection('oracao')" class="flex flex-col items-center"><span class="text-[10px] font-bold text-white/70">ORAÇÃO</span></button>
+    <button onclick="showSection('palavra')" class="flex flex-col items-center"><span class="text-[10px] font-bold text-white/70">BÍBLIA</span></button>
+    <button onclick="showSection('quiz')" class="flex flex-col items-center"><span class="text-[10px] font-bold text-white/70">QUIZ</span></button>
+  </div>
+
+  <div id="home" class="section active p-6 max-w-2xl mx-auto">
+    <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
+      <h2 class="text-[#E8B923] text-xl font-bold mb-4">Bem-vindo à Missão</h2>
+      <p class="text-sm leading-relaxed text-gray-300 mb-6">Estamos em Tacna para transformar vidas através do Evangelho. Una-se a nós nesta jornada!</p>
+      <a href="https://wa.me/?text=Conheça a Missão Peru: https://nogueiralfha-ux.github.io/missao-peru-tacna/" class="block w-full bg-[#15803D] py-4 rounded-xl font-bold text-xs uppercase shadow-lg">Compartilhar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div id="doar" class="section p-6 max-w-md mx-auto text-center">
+    <h2 class="text-[#E8B923] text-xl font-bold mb-6">Semente Missionária</h2>
+    <div class="bg-[#15803D] p-6 rounded-3xl mb-4 shadow-xl">
+      <p class="text-[10px] uppercase font-bold text-white/80">Chave PIX (CPF)</p>
+      <p class="text-xl font-mono font-bold my-2">05475258856</p>
+      <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#0A2540] px-6 py-2 rounded-full font-bold text-xs mt-2">COPIAR CHAVE</button>
+    </div>
+    <img src="qr-pix.png" class="w-48 h-48 mx-auto bg-white p-2 rounded-2xl shadow-lg" alt="QR Code">
+    <p class="mt-4 text-xs text-gray-400 font-bold uppercase tracking-widest">Mês 4: Gratidão e Provisão</p>
+  </div>
+
+  <div id="oracao" class="section p-6 max-w-2xl mx-auto">
+    <h2 class="text-[#E8B923] text-xl font-bold mb-6 text-center">Clamor por Tacna</h2>
     <div class="space-y-4">
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">1. Portas Abertas</p>
-            <p class="text-sm">Para que o povo Quéchua receba a mensagem com o coração aberto.</p>
-        </div>
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">2. Provisão</p>
-            <p class="text-sm">Pelo sustento da base e dos novos missionários que chegarão.</p>
-        </div>
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">3. Saúde e Proteção</p>
-            <p class="text-sm">Pela família missionária contra toda enfermidade e oposição.</p>
-        </div>
+      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🙏 Pelas famílias Quéchua</div>
+      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🏠 Pela nova base em Tacna</div>
     </div>
-    <button onclick="alert('Obrigado por interceder! Sua oração move os céus.')" class="mt-8 w-full border-2 border-[#E8B923] py-3 rounded-lg font-bold text-[#E8B923]">
-        EU OREI POR ESTES MOTIVOS
-    </button>
-</div>
+  </div>
 
-<div id="palavra" class="section hidden p-6 text-center">
-    <h2 class="text-[#E8B923] text-2xl font-bold mb-6">Trilha Missionária</h2>
-    <div class="bg-[#0A2540] border border-white/10 p-6 rounded-3xl shadow-2xl">
-        <p class="text-xl italic mb-4">"Pede-me, e eu te darei as nações por herança, e os fins da terra por tua possessão."</p>
-        <p class="font-bold text-[#15803D]">Salmos 2:8</p>
-        <hr class="my-6 border-white/10">
-        <p class="text-sm text-gray-400">Leitura sugerida para hoje:</p>
-        <p class="text-lg font-bold">Atos Capítulo 13</p>
+  <div id="palavra" class="section p-4 max-w-2xl mx-auto">
+    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 shadow-2xl">
+      <div class="text-center mb-6">
+        <span id="mes-label" class="bg-[#15803D] text-[10px] font-black px-4 py-1 rounded-full uppercase">Janeiro</span>
+        <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Devocional</h2>
+      </div>
+      <div id="dev-conteudo" class="space-y-6"></div>
+      <button onclick="compartilhar()" class="mt-8 w-full bg-[#15803D] py-4 rounded-xl font-bold text-xs uppercase shadow-lg">📲 Compartilhar Meditação</button>
     </div>
-</div>
-        <a href="https://wa.me/5500000000000" class="block w-full bg-[#15803D] py-4 rounded-xl font-bold uppercase tracking-widest">
-            Compartilhar no WhatsApp
-        </a>
-        <div id="oracao" class="section hidden p-6">
-    <h2 class="text-[#E8B923] text-2xl font-bold mb-6 text-center underline">Clamor por Tacna</h2>
-    <div class="space-y-4">
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">1. Portas Abertas</p>
-            <p class="text-sm">Para que o povo Quéchua receba a mensagem com o coração aberto.</p>
-        </div>
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">2. Provisão</p>
-            <p class="text-sm">Pelo sustento da base e dos novos missionários que chegarão.</p>
-        </div>
-        <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">
-            <p class="font-bold text-[#E8B923]">3. Saúde e Proteção</p>
-            <p class="text-sm">Pela família missionária contra toda enfermidade e oposição.</p>
-        </div>
-    </div>
-    <button onclick="alert('Obrigado por interceder! Sua oração move os céus.')" class="mt-8 w-full border-2 border-[#E8B923] py-3 rounded-lg font-bold text-[#E8B923]">
-        EU OREI POR ESTES MOTIVOS
-    </button>
-</div>
+  </div>
 
-<div id="palavra" class="section hidden p-6 text-center">
-    <h2 class="text-[#E8B923] text-2xl font-bold mb-6">Trilha Missionária</h2>
-    <div class="bg-[#0A2540] border border-white/10 p-6 rounded-3xl shadow-2xl">
-        <p class="text-xl italic mb-4">"Pede-me, e eu te darei as nações por herança, e os fins da terra por tua possessão."</p>
-        <p class="font-bold text-[#15803D]">Salmos 2:8</p>
-        <hr class="my-6 border-white/10">
-        <p class="text-sm text-gray-400">Leitura sugerida para hoje:</p>
-        <p class="text-lg font-bold">Atos Capítulo 13</p>
+  <div id="quiz" class="section p-6 text-center">
+    <h2 class="text-[#E8B923] text-xl font-bold mb-6 italic">Desafio Bíblico</h2>
+    <div class="bg-white/10 p-8 rounded-3xl">
+      <p class="mb-6">Onde Deus chamou o irmão Antonio em 1997?</p>
+      <button onclick="alert('Correto! O Peru!')" class="w-full bg-white/10 py-3 mb-2 rounded-xl">Peru</button>
+      <button onclick="alert('Tente novamente!')" class="w-full bg-white/10 py-3 rounded-xl">Chile</button>
     </div>
-</div>
-    </div>
+  </div>
 
-    <div id="doar" class="section p-6 text-center">
-        <h2 class="text-[#E8B923] text-xl font-bold mb-4">Apoio Financeiro</h2>
-        <div class="bg-white/5 p-6 rounded-2xl">
-            <p class="mb-4">Sua semente ajuda a manter a base em Tacna.</p>
-            <p class="text-2xl font-mono bg-black/30 p-3 rounded">05475258856</p>
-            <button onclick="alert('Chave Copiada!')" class="mt-4 text-[#E8B923] font-bold underline">COPIAR CHAVE PIX</button>
-        </div>
-    </div>
+  <script>
+    // BASE DE DADOS
+    const devocionais = {
+      "01": {
+        nome: "Janeiro - Recomeço e Esperança",
+        dias: {
+          "01": { t: "A Promessa de um Novo Começo", e: "Deus nos oferece sempre a chance de recomeçar.", r: "Apocalipse 21:5a", f: "Em Cristo, cada amanhecer é um convite para um novo começo." },
+          "02": { t: "Semeando Esperança", e: "A esperança bíblica é uma confiança firme nas promessas de Deus.", r: "Jeremias 29:11", f: "A esperança em Deus é a âncora da alma." }
+        }
+      }
+    };
 
-    <div id="oracao" class="section p-6">
-        <h2 class="text-[#E8B923] text-xl font-bold mb-4 text-center">Motivos de Oração</h2>
-        <ul class="space-y-3">
-            <li class="bg-white/5 p-3 rounded">🙏 Pelas famílias Quéchua</li>
-            <li class="bg-white/5 p-3 rounded">🙏 Pela saúde dos missionários</li>
-            <li class="bg-white/5 p-3 rounded">🙏 Pela provisão da nova base</li>
-        </ul>
-    </div>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
 
-    <div id="quiz" class="section p-6 text-center">
+    function initDevocional() {
+      const hoje = new Date();
+      const dia = String(hoje.getDate()).padStart(2, '0');
+      const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+      const m = devocionais[mes] || devocionais["01"];
+      const d = m.dias[dia] || m.dias["01"];
 
-        <h2 class="text-[#E8B923] text-xl font-bold mb-4">Desafio Missionário</h2>
+      document.getElementById('mes-label').innerText = m.nome;
+      document.getElementById('dia-titulo').innerText = d.t;
+      document.getElementById('dev-conteudo').innerHTML = `
+        <p class="text-sm italic border-l-4 border-[#E8B923] p-4 bg-black/20">"${d.e}"</p>
+        <p class="text-center font-bold text-[#E8B923] text-xs">Ref: ${d.r}</p>
+        <div class="p-4 bg-[#15803D]/20 rounded-2xl text-center italic font-serif">"${d.f}"</div>
+      `;
+      window.cur = d;
+    }
+
+    function compartilhar() {
+      const msg = `*${window.cur.t}*%0A%0A"${window.cur.f}"%0A%0AConfira no App: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
+      window.open(`https://api.whatsapp.com/send?text=${msg}`);
+    }
+
+    window.onload = initDevocional;
+  </script>
+</body>
+</html>
