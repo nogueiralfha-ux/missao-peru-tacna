@@ -6,91 +6,71 @@
   <title>Missão Peru - Tacna</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, sans-serif; }
     .section { display: none; }
-    .section.active { display: block; }
+    .active { display: block !important; }
+    .nav-btn { cursor: pointer; }
   </style>
 </head>
 <body class="bg-[#0A2540] text-white min-h-screen pb-24">
 
-  <div class="bg-gradient-to-r from-[#15803D] via-[#0A2540] to-[#15803D] py-8 text-center shadow-lg">
-    <div class="relative inline-block">
-        <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-48 h-48 rounded-full border-4 border-[#E8B923] object-cover">
-    </div>
-    <h1 class="text-4xl font-bold text-[#E8B923] mt-4">Missão Peru</h1>
-    <p class="text-white/90 text-lg mt-1 px-4">Tacna • Um Chamado para os que têm Coragem</p>
+  <div class="bg-gradient-to-r from-[#15803D] via-[#0A2540] to-[#15803D] py-8 text-center">
+    <img src="logo-missao-peru.png" class="mx-auto w-40 h-40 rounded-full border-4 border-[#E8B923] object-cover bg-slate-800" alt="Logo">
+    <h1 class="text-3xl font-bold text-[#E8B923] mt-3">Missão Peru</h1>
+    <p class="text-sm">Tacna • Um Chamado de Coragem</p>
   </div>
 
-  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-3 z-50">
-    <button onclick="showSection('home')" class="flex flex-col items-center px-3 text-[#E8B923]">??<span class="text-[10px] mt-1">INÍCIO</span></button>
-    <button onclick="showSection('doar')" class="flex flex-col items-center px-3 text-white/70">??<span class="text-[10px] mt-1">DOAR</span></button>
-    <button onclick="showSection('oracao')" class="flex flex-col items-center px-3 text-white/70">??<span class="text-[10px] mt-1">ORAÇÃO</span></button>
-    <button onclick="showSection('palavra')" class="flex flex-col items-center px-3 text-white/70">??<span class="text-[10px] mt-1">PALAVRA</span></button>
-    <button onclick="showSection('quiz')" class="flex flex-col items-center px-3 text-white/70">?<span class="text-[10px] mt-1">QUIZ</span></button>
+  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-4 z-50">
+    <button onclick="irPara('home')" class="nav-btn flex flex-col items-center text-[#E8B923]">??<span class="text-[10px]">INÍCIO</span></button>
+    <button onclick="irPara('doar')" class="nav-btn flex flex-col items-center">??<span class="text-[10px]">DOAR</span></button>
+    <button onclick="irPara('oracao')" class="nav-btn flex flex-col items-center">??<span class="text-[10px]">ORAÇÃO</span></button>
+    <button onclick="irPara('quiz')" class="nav-btn flex flex-col items-center">?<span class="text-[10px]">QUIZ</span></button>
   </div>
 
-  <main class="p-6 max-w-2xl mx-auto">
-    
+  <main class="p-6">
     <div id="home" class="section active">
-      <div class="bg-[#15803D]/20 border border-[#15803D] p-6 rounded-2xl">
-        <h2 class="text-[#E8B923] text-xl font-bold mb-4">Nossa História</h2>
-        <p class="leading-relaxed">Desde 1993 Deus vem escrevendo nossa história. Em 1997, numa visão clara, a direção foi dada: **Tacna, Peru**.</p>
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+        <h2 class="text-[#E8B923] font-bold mb-2">Nossa História</h2>
+        <p>Desde 1993 Deus escreve nossa história. Em 1997 a visão: Tacna, Peru!</p>
       </div>
-      <button onclick="showSection('doar')" class="mt-8 w-full bg-[#E8B923] text-[#0A2540] font-black py-5 rounded-xl text-xl">QUERO APOIAR A MISSÃO</button>
+      <button onclick="irPara('doar')" class="mt-6 w-full bg-[#E8B923] text-[#0A2540] font-bold py-4 rounded-xl">QUERO APOIAR</button>
     </div>
 
     <div id="doar" class="section text-center">
-      <h2 class="text-2xl font-bold text-[#E8B923] mb-6">Sua Oferta em Tacna</h2>
-      <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
-        <p class="text-xs font-bold uppercase text-white/80">Chave PIX (CPF)</p>
-        <p class="text-2xl font-mono font-bold mt-2 text-[#E8B923]">05475258856</p>
-        <button onclick="copyPix()" class="mt-4 bg-white text-[#0A2540] px-8 py-3 rounded-full font-bold">COPIAR CHAVE</button>
-        <div class="mt-6 bg-white p-2 inline-block rounded-xl">
-            <img src="qr-pix.png" class="w-48 h-48" alt="QR Code Nubank">
+      <h2 class="text-[#E8B923] font-bold mb-4">Oferta Missionária</h2>
+      <div class="bg-white/5 p-6 rounded-2xl">
+        <p class="text-sm">Chave PIX (CPF):</p>
+        <p class="text-xl font-bold text-[#E8B923]">05475258856</p>
+        <button onclick="copiar()" class="mt-4 bg-white text-black px-6 py-2 rounded-full text-sm font-bold">COPIAR CHAVE</button>
+        <div class="mt-6">
+          <img src="qr-pix.png" class="mx-auto w-48 h-48 bg-white p-2 rounded-lg" alt="QR Code">
         </div>
       </div>
     </div>
 
     <div id="oracao" class="section">
-        <h2 class="text-2xl font-bold text-[#E8B923] mb-4">Motivos de Oração</h2>
-        <ul class="space-y-4">
-            <li class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">??? Proteção na fronteira Peru-Chile</li>
-            <li class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">?? Aluguel da base missionária</li>
-        </ul>
+      <h2 class="text-[#E8B923] font-bold mb-4">Intercessão</h2>
+      <p class="bg-white/5 p-3 rounded mb-2">??? Proteção na fronteira</p>
+      <p class="bg-white/5 p-3 rounded mb-2">?? Aluguel da base</p>
     </div>
 
     <div id="quiz" class="section">
-        <div class="bg-white/10 p-8 rounded-3xl text-center">
-            <h2 id="pergunta" class="text-xl font-bold mb-6 italic italic">Qual o país da nossa missão?</h2>
-            <div id="opcoes" class="space-y-3">
-                <button onclick="alert('Correto! ??')" class="w-full bg-white/10 py-3 rounded-xl">Peru</button>
-                <button onclick="alert('Tente novamente! ??')" class="w-full bg-white/10 py-3 rounded-xl">Bolívia</button>
-            </div>
-        </div>
+      <div class="bg-white/10 p-6 rounded-2xl text-center">
+        <p class="font-bold mb-4">Qual o país da missão?</p>
+        <button onclick="alert('Correto! ??')" class="w-full bg-white/10 py-3 mb-2 rounded">Peru</button>
+        <button onclick="alert('Tente de novo ??')" class="w-full bg-white/10 py-3 rounded">Brasil</button>
+      </div>
     </div>
-
   </main>
 
   <script>
-    function showSection(id) {
-      // Esconde todas as seções
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(s => s.classList.remove('active'));
-      
-      // Mostra a seção clicada
-      const target = document.getElementById(id);
-      if (target) {
-        target.classList.add('active');
-      }
-
-      // Muda a cor do botão clicado
-      document.querySelectorAll('nav button').forEach(btn => btn.style.color = 'rgba(255,255,255,0.7)');
+    function irPara(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0,0);
     }
-
-    function copyPix() {
-      navigator.clipboard.writeText('05475258856').then(() => {
-        alert('? Chave PIX copiada! Que Deus o abençoe!');
-      });
+    function copiar() {
+      navigator.clipboard.writeText('05475258856');
+      alert('Chave Copiada!');
     }
   </script>
 </body>
