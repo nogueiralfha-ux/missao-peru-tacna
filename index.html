@@ -18,10 +18,10 @@
   <div class="bg-gradient-to-b from-[#15803D] to-[#000814] py-6 text-center shadow-lg">
     <img src="logo-missao-peru.png" class="mx-auto w-24 h-24 rounded-full border-4 border-[#E8B923] mb-2 shadow-2xl">
     <h1 class="text-xl font-bold text-[#E8B923]">Missão Peru</h1>
-    <div class="flex justify-center gap-4 mt-2 text-[10px] font-bold uppercase tracking-widest">
-        <span>🪙 Moedas: <span id="moedas" class="text-[#E8B923]">0</span></span>
-        <span>❤️ Vidas: <span id="vidas" class="text-red-500">3</span></span>
-        <span>⭐ Pontos: <span id="pontos">0</span></span>
+    <div class="flex justify-center gap-4 mt-2 text-[10px] font-bold uppercase tracking-widest text-white/80">
+        <span>🪙 <span id="moedas">0</span></span>
+        <span>❤️ <span id="vidas">3</span></span>
+        <span>⭐ <span id="pontos">0</span></span>
     </div>
   </div>
 
@@ -35,28 +35,30 @@
   </div>
 
   <main class="p-6 max-w-2xl mx-auto">
+    
     <div id="home" class="section active text-center">
         <div class="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-xl">
-            <h2 class="text-[#E8B923] text-xl font-black uppercase mb-4 italic">Apresentação do Aplicativo</h2>
+            <h2 class="text-[#E8B923] text-xl font-black uppercase mb-6 italic">Apresentação do Aplicativo</h2>
             <div class="text-sm text-gray-200 leading-relaxed text-justify space-y-4 mb-8">
-                <p>Missão Peru é mais do que um aplicativo — é um chamado. Uma plataforma criada para conectar corações à obra missionária, fortalecer vidas na Palavra e mobilizar pessoas para viverem o propósito eterno de Deus entre as nações.</p>
+                <p>Missão Peru é mais do que um aplicativo — é um chamado.</p>
+                <p>Uma plataforma criada para conectar corações à obra missionária, fortalecer vidas na Palavra e mobilizar pessoas para viverem o propósito eterno de Deus entre as nações.</p>
                 <p>Aqui você acompanha projetos, intercede, participa, aprende e se envolve com aquilo que o Senhor está fazendo em Tacna e além. Cada acesso é uma oportunidade de transformação. Cada clique é um passo de fé.</p>
                 <p class="font-bold italic text-[#E8B923]">Este não é apenas um espaço digital. É um altar virtual de compromisso, serviço e esperança.</p>
-                <p class="text-center font-black uppercase">✝️ Responda ao chamado e viva a missão</p>
+                <p class="text-center font-black uppercase text-[#E8B923]">✝️ Responda ao chamado e viva a missão</p>
             </div>
-            <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">CONHEÇA NOSSOS PROJETOS</button>
+            <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs">CONHEÇA NOSSOS PROJETOS</button>
         </div>
     </div>
 
     <div id="clube" class="section text-center">
         <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
-            <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
+            <h2 class="text-[#E8B923] text-xl font-black uppercase italic">Clube Missionário</h2>
         </div>
         <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between mb-6">
             <span class="font-bold text-[#E8B923]">Cursos & E-books</span>
             <span>🔒</span>
         </div>
-        <a href="LINK_CADASTRO_CLUBE" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">
+        <a href="LINK_FUTURO_DO_CLUBE" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">
             📝 Cadastro para os beneficios do clube
         </a>
     </div>
@@ -72,26 +74,22 @@
         </div>
     </div>
 
-    <div id="projeto" class="section">
-        <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
-            <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic">Nossa Jornada</h2>
-            <p class="text-sm text-gray-200 leading-relaxed text-justify mb-4">Desde 1993, a Missão Peru tem sido um braço de Deus em Tacna. Com marcos em 1999 e 2008, seguimos plantando igrejas e cuidando de vidas.</p>
-        </div>
-    </div>
-
     <div id="doar" class="section text-center">
-        <h2 class="text-[#E8B923] text-2xl font-black italic mb-6">Semente Missionária</h2>
+        <h2 class="text-[#E8B923] text-2xl font-black italic mb-6 uppercase">Semente Missionária</h2>
         <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl mb-6">
             <h3 class="text-white font-bold mb-2">Ser Apoiador Mensal</h3>
             <p class="text-[10px] text-gray-200 mb-4 italic">Compromisso de fidelidade por 12 meses.</p>
-            <a href="LINK_APOIADOR_MENSAL" target="_blank" class="block w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs shadow-lg">📝 SER APOIADOR MENSAL</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScvuR68w5vxsJDBw-Y1ZuXDv78AO7UO-rTYtd3rHEoguYHpjg/viewform?usp=sharing" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">
+                📝 SER APOIADOR MENSAL
+            </a>
         </div>
-        <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+        <div class="bg-white/5 border border-white/10 p-6 rounded-3xl shadow-xl">
             <h3 class="text-gray-300 text-sm font-bold mb-4 italic">Doar agora, única vez?</h3>
-            <p class="text-lg font-mono font-bold text-white mb-4 italic tracking-widest underline decoration-[#E8B923]">05475258856</p>
+            <p class="text-lg font-mono font-bold text-white mb-4 tracking-widest">05475258856</p>
             <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada!')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase">COPIAR CHAVE PIX</button>
         </div>
     </div>
+
   </main>
 
   <script>
@@ -104,18 +102,14 @@
       window.scrollTo(0,0);
     }
 
-    // CORREÇÃO: Função robusta para carregar o arquivo questions.json
     async function initQuiz() {
-      const perguntaEl = document.getElementById("pergunta");
       try {
         const res = await fetch('questions.json');
-        if (!res.ok) throw new Error("questions.json não encontrado");
         const data = await res.json();
         perguntas = data.sort(() => Math.random() - 0.5);
         if (perguntas.length > 0) mostrarPergunta();
       } catch(e) {
-        perguntaEl.innerText = "Erro ao carregar perguntas. Verifique se o arquivo questions.json está na raiz do seu GitHub.";
-        console.error(e);
+        document.getElementById("pergunta").innerText = "Erro ao carregar o Desafio. Verifique o arquivo questions.json.";
       }
     }
 
@@ -138,11 +132,10 @@
     function verificarResposta(resposta, correta) {
       if (resposta === correta) {
         pontuacao++; moedas += 10; streak++;
-        if (streak === 5) { moedas += 50; alert("🔥 BÔNUS DE SEQUÊNCIA +50 MOEDAS!"); streak = 0; }
         index++; mostrarPergunta();
       } else {
         vidas--; streak = 0;
-        if (vidas <= 0) { alert("Fim de jogo! Pontuação: " + pontuacao); resetar(); }
+        if (vidas <= 0) { alert("Fim de jogo!"); resetar(); }
       }
       atualizarStatus();
     }
@@ -162,11 +155,6 @@
       else if (pontuacao >= 25) m = "🥈 Obreiro";
       else if (pontuacao >= 10) m = "🥉 Discípulo";
       document.getElementById("medalha").innerText = m;
-    }
-
-    function usarVidaExtra() {
-      if (moedas >= 150) { moedas -= 150; vidas++; atualizarStatus(); }
-      else { alert("Moedas insuficientes!"); }
     }
 
     function resetar() { index = 0; pontuacao = 0; moedas = 0; vidas = 3; mostrarPergunta(); }
