@@ -1,3 +1,17 @@
 const CACHE = 'missao-peru-v1';
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(cache => cache.addAll(['./']))));
+
 self.addEventListener('fetch', e => e.respondWith(caches.match(e.request).then(resp => resp || fetch(e.request))));
+
+function compartilharDevocional() {
+    const tema = document.getElementById("dev-tema").innerText;
+    const versiculo = document.getElementById("dev-versiculo").innerText;
+    const ref = document.getElementById("dev-ref").innerText;
+    
+    // Monta a mensagem formatada
+    const mensagem = `*Devocional Missão Peru* 🇵🇪\n\n*Tema:* ${tema}\n\n${versiculo}\n(_${ref}_)\n\n📖 Leia o devocional completo no App:\n[COLE_O_LINK_DO_SEU_SITE_AQUI]`;
+    
+    // Codifica para URL e abre o WhatsApp
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
