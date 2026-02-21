@@ -271,11 +271,26 @@
         }
       });
     }
+} // Este é o fechamento da função anterior (ativarNotificacoes)
 
+    function compartilharDevocional() {
+        const tema = document.getElementById("dev-tema").innerText;
+        const versiculo = document.getElementById("dev-versiculo").innerText;
+        const ref = document.getElementById("dev-ref").innerText;
+        const linkApp = window.location.href; 
+        
+        const mensagem = `*Devocional Missão Peru* 🇵🇪\n\n*Tema:* ${tema}\n\n"${versiculo}"\n(_${ref}_)\n\n📖 Leia o devocional completo no App:\n${linkApp}`;
+        
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, '_blank');
+    }
+
+    window.onload = () => { initQuiz(); carregarDevocional(); verificarPermissaoNotificacao(); };
     window.onload = () => { initQuiz(); carregarDevocional(); verificarPermissaoNotificacao(); };
   </script>
 </body>
 </html>
+
 
 
 
