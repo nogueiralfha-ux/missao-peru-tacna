@@ -3,120 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Missão Peru</title>
+  <title>Missão Peru - App</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, sans-serif; scroll-behavior: smooth; }
+    body { font-family: system-ui, sans-serif; scroll-behavior: smooth; background: #000814; color: white; }
     .section { display: none; }
     .active { display: block; }
+    .quiz-btn { background: #0074D9; transition: 0.3s; }
+    .quiz-btn:hover { background: #39CCCC; }
   </style>
 </head>
-<body class="bg-[#0A2540] text-white min-h-screen pb-24">
+<body class="min-h-screen pb-24">
 
-  <div class="bg-gradient-to-b from-[#15803D] to-[#0A2540] py-8 text-center shadow-lg">
-    <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-32 h-32 rounded-full border-4 border-[#E8B923] mb-4 shadow-2xl">
-    <h1 class="text-3xl font-bold text-[#E8B923]">Missão Peru</h1>
-    <p class="text-[10px] text-white/70 uppercase tracking-widest mt-2">Tecnologia a Serviço do Reino</p>
+  <div class="bg-gradient-to-b from-[#15803D] to-[#000814] py-6 text-center shadow-lg">
+    <img src="logo-missao-peru.png" class="mx-auto w-24 h-24 rounded-full border-4 border-[#E8B923] mb-2 shadow-2xl">
+    <h1 class="text-xl font-bold text-[#E8B923]">Missão Peru</h1>
+    <div id="status-bar" class="flex justify-center gap-4 mt-2 text-[10px] font-bold uppercase tracking-widest">
+        <span>🪙 Moedas: <span id="moedas" class="text-[#E8B923]">0</span></span>
+        <span>❤️ Vidas: <span id="vidas" class="text-red-500">3</span></span>
+        <span>⭐ Pontos: <span id="pontos">0</span></span>
+    </div>
   </div>
 
-  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-4 z-50 shadow-2xl">
+  <div class="fixed bottom-0 left-0 right-0 bg-[#000814] border-t border-[#15803D] flex justify-around py-4 z-50">
     <button onclick="showSection('home')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">INÍCIO</span></button>
     <button onclick="showSection('projeto')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">PROJETO</span></button>
     <button onclick="showSection('palavra')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">BÍBLIA</span></button>
-    <button onclick="showSection('clube')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">CLUBE</span></button>
+    <button onclick="showSection('quiz')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">DESAFIO</span></button>
+    <button onclick="showSection('clube')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">CLUBE</span></button>
     <button onclick="showSection('doar')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">DOAR</span></button>
   </div>
 
-  <div id="home" class="section active p-6 max-w-2xl mx-auto">
-    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center shadow-xl">
-      <h2 class="text-[#E8B923] text-2xl font-bold mb-4 italic">Recomeço e Esperança</h2>
-      <p class="text-sm leading-relaxed text-gray-300 mb-8 italic">"As misericórdias do Senhor renovam-se cada manhã. Junte-se a nós nesta jornada."</p>
-      
-      <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-sm mb-4 shadow-lg active:scale-95 transition-all">
-          📖 CONHEÇA NOSSOS PROJETOS
-      </button>
-      
-      <a href="https://wa.me/?text=Conheça a Missão Peru: https://nogueiralfha-ux.github.io/missao-peru-tacna/" class="block w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl font-bold text-[10px] uppercase text-center">
-          📲 Compartilhar Aplicativo
-      </a>
-    </div>
-  </div>
-
-  <div id="projeto" class="section p-6 max-w-2xl mx-auto">
-    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl">
-      <h2 class="text-[#E8B923] text-2xl font-bold mb-6 text-center italic text-justify">Nossa Jornada Missionária</h2>
-      <div class="space-y-4 text-sm text-gray-200 leading-relaxed">
-        <p>Desde 1995, estamos envolvidos a levar a luz do Evangelho para as nações, porem, Deus tem nos chamados especificamente para servir no pais do Peru. Com passagens marcantes em 1999 e 2008, nosso foco é a plantação de igrejas e o cuidado social.</p>
-        <p>Estamos construindo algo robusto: capacitação teológica, e-books e cursos para todos os que amam o campo missionário.</p>
-        <button onclick="showSection('clube')" class="w-full mt-6 bg-[#15803D] py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest">Ver Cursos e E-books</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="palavra" class="section p-4 max-w-2xl mx-auto">
-    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 shadow-2xl">
-      <div class="text-center mb-6">
-        <span id="mes-label" class="bg-[#15803D] text-[10px] font-black px-4 py-1 rounded-full uppercase italic">Janeiro</span>
-        <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Caminhos do Coração</h2>
-      </div>
-      <div id="dev-conteudo" class="space-y-6"></div>
-      <button onclick="compartilhar()" class="mt-8 w-full bg-[#15803D] py-4 rounded-xl font-bold text-xs uppercase shadow-lg">📲 Compartilhar Meditação</button>
-    </div>
-  </div>
-
-  <div id="clube" class="section p-6 max-w-2xl mx-auto">
-    <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] text-center mb-6">
-        <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
-        <p class="text-xs mt-2 italic">Acesso exclusivo a treinamentos e materiais digitais.</p>
-    </div>
-    <div class="space-y-4">
-        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex justify-between items-center">
-            <div><p class="font-bold text-sm text-[#E8B923]">Cursos de Missões</p><p class="text-[9px] text-gray-500">Em breve: Novos módulos</p></div>
-            <span>🔒</span>
-        </div>
-        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex justify-between items-center">
-            <div><p class="font-bold text-sm text-[#E8B923]">Biblioteca E-books</p><p class="text-[9px] text-gray-500">Baixe "Caminhos do Coração"</p></div>
-            <span>📚</span>
+  <main class="p-6 max-w-2xl mx-auto">
+    
+    <div id="home" class="section active text-center">
+        <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+            <h2 class="text-2xl font-bold text-[#E8B923] mb-4 italic">Recomeço e Esperança</h2>
+            <p class="text-sm text-gray-300 mb-8 italic">"As misericórdias do Senhor renovam-se cada manhã."</p>
+            <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-sm mb-4">📖 CONHEÇA NOSSOS PROJETOS</button>
         </div>
     </div>
-    <button onclick="showSection('doar')" class="w-full mt-6 bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs">Assine para Liberar Tudo</button>
-  </div>
 
-  <div id="oracao" class="section p-6 max-w-2xl mx-auto">
-    <h2 class="text-[#E8B923] text-xl font-bold mb-6 text-center italic">Altar de Oração</h2>
-    <div class="space-y-4">
-      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🙏 Pelas famílias do Peru</div>
-      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🏠 Pela expansão da obra</div>
+    <div id="projeto" class="section">
+        <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
+            <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic text-justify">Nossa Jornada Missionária</h2>
+            <p class="text-sm text-gray-200 leading-relaxed mb-4">Desde de quando Deus nos chamou, para cumprir o "IDE", estamos envolvidos com o Reino de Deus, e por 2 oportunidades que nos permitiu em 1999 e 2008, levamos a Palavra ao Peru, pois acreditamos, quero deixar essa frase "DFomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil,e Nas Naçoes".</p>
+            <button onclick="showSection('clube')" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-[10px] uppercase">Ver Cursos e E-books</button>
+        </div>
     </div>
-  </div>
 
-  <div id="doar" class="section p-6 max-w-md mx-auto text-center">
-    <h2 class="text-[#E8B923] text-2xl font-bold mb-6 italic">Apoie a Missão</h2>
-    <div class="bg-[#15803D] p-6 rounded-3xl mb-8 shadow-xl">
-      <p class="text-[10px] uppercase font-bold text-white/80 mb-2">Pix (CPF)</p>
-      <p class="text-xl font-mono font-bold mb-4">05475258856</p>
-      <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#0A2540] px-6 py-2 rounded-full font-bold text-[10px] uppercase">Copiar Chave</button>
+    <div id="palavra" class="section">
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center shadow-2xl">
+            <span id="mes-label" class="bg-[#15803D] text-[10px] px-4 py-1 rounded-full uppercase italic">Janeiro</span>
+            <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Caminhos do Coração</h2>
+            <div id="dev-conteudo" class="my-6 space-y-4"></div>
+            <button onclick="compartilhar()" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-xs">📲 COMPARTILHAR MEDITAÇÃO</button>
+        </div>
     </div>
-    <a href="LINK_ASSINATURA" class="block w-full border-2 border-[#E8B923] text-[#E8B923] py-4 rounded-xl font-black uppercase text-sm shadow-lg">Assinar Mensalmente</a>
-  </div>
+
+    <div id="quiz" class="section text-center">
+        <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30">
+            <h2 id="medalha" class="text-[#E8B923] font-black text-xl mb-4 uppercase tracking-tighter">Iniciante</h2>
+            <div id="pergunta" class="text-lg font-bold mb-6 text-justify italic">Carregando perguntas...</div>
+            <div id="alternativas" class="space-y-3"></div>
+            <div class="mt-8 pt-6 border-t border-white/10">
+                <button onclick="usarVidaExtra()" class="w-full bg-red-900/40 border border-red-500 py-3 rounded-xl text-[10px] font-bold uppercase">❤️ Comprar Vida (150 moedas)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="clube" class="section text-center">
+        <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
+            <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
+        </div>
+        <div class="space-y-4">
+            <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between">
+                <span class="font-bold text-[#E8B923]">Cursos & E-books</span>
+                <span>🔒</span>
+            </div>
+            <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black text-xs">ASSINE PARA LIBERAR TUDO</button>
+        </div>
+    </div>
+
+    <div id="doar" class="section text-center">
+        <h2 class="text-[#E8B923] text-2xl font-bold mb-6 italic">Apoie a Missão</h2>
+        <div class="bg-[#15803D] p-8 rounded-3xl mb-4 shadow-xl">
+            <p class="text-[10px] font-bold mb-2">PIX (CPF)</p>
+            <p class="text-xl font-mono font-bold mb-4">05475258856</p>
+            <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#000814] px-6 py-2 rounded-full font-bold text-[10px]">COPIAR CHAVE</button>
+        </div>
+    </div>
+
+  </main>
+
+  <audio id="audioCorrect" src="assets/audio/correct.mp3"></audio>
+  <audio id="audioWrong" src="assets/audio/wrong.mp3"></audio>
 
   <script>
+    // VARIÁVEIS DO QUIZ
+    let perguntas = [];
+    let index = 0;
+    let pontuacao = 0;
+    let moedas = 0;
+    let streak = 0;
+    let vidas = 3;
+
+    // DEVOCIONAL JANEIRO
     const devocionais = {
-      "01": {
-        nome: "Janeiro - Recomeço e Esperança",
-        dias: {
-          "01": { t: "A Promessa de um Novo Começo", e: "Deus nos oferece sempre a chance de recomeçar. Suas misericórdias renovam-se cada manhã.", r: "Apocalipse 21:5a", f: "Em Cristo, cada amanhecer é um convite para um novo começo." },
-          "02": { t: "Semeando Esperança no Coração", e: "A esperança bíblica é uma confiança firme nas promessas de Deus.", r: "Jeremias 29:11", f: "A esperança em Deus é a âncora da alma." }
-        }
-      }
+      "01": { nome: "Janeiro - Recomeço e Esperança", dias: {
+          "01": { t: "Novo Começo", e: "Misericórdias renovadas.", r: "Apocalipse 21:5a", f: "Cada amanhecer é um convite." }
+        }}
     };
 
     function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      const target = document.getElementById(id);
-      if(target) target.classList.add('active');
+      document.getElementById(id).classList.add('active');
       window.scrollTo(0,0);
     }
+
+    // LÓGICA DO QUIZ
+    async function initQuiz() {
+      try {
+        const res = await fetch("questions.json");
+        const data = await res.json();
+        perguntas = data.sort(() => Math.random() - 0.5);
+        mostrarPergunta();
+      } catch(e) { console.log("Crie o arquivo questions.json!"); }
+    }
+
+    function mostrarPergunta() {
+      const q = perguntas[index];
+      if(!q) return;
+      document.getElementById("pergunta").innerText = q.question;
+      const container = document.getElementById("alternativas");
+      container.innerHTML = "";
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.innerText = opt;
+        btn.className = "quiz-btn w-full py-4 rounded-xl font-bold text-sm shadow-lg";
+        btn.onclick = () => verificarResposta(i, q.correct);
+        container.appendChild(btn);
+      });
+      atualizarStatus();
+    }
+
+    function verificarResposta(resposta, correta) {
+      if (resposta === correta) {
+        document.getElementById("audioCorrect").play();
+        pontuacao++; moedas += 10; streak++;
+        if (streak === 5) { moedas += 50; alert("🔥 BÔNUS DE SEQUÊNCIA +50 MOEDAS!"); streak = 0; }
+        index++;
+        mostrarPergunta();
+      } else {
+        document.getElementById("audioWrong").play();
+        vidas--; streak = 0;
+        if (vidas <= 0) { alert("Fim de jogo! Pontos: " + pontuacao); resetar(); }
+      }
+      atualizarStatus();
+    }
+
+    function atualizarStatus() {
+      document.getElementById("pontos").innerText = pontuacao;
+      document.getElementById("moedas").innerText = moedas;
+      document.getElementById("vidas").innerText = vidas;
+      atualizarMedalha();
+    }
+
+    function atualizarMedalha() {
+      let m = "Iniciante";
+      if (pontuacao >= 100) m = "🔥 Apóstolo";
+      else if (pontuacao >= 75) m = "👑 Teólogo";
+      else if (pontuacao >= 50) m = "🥇 Missionário";
+      else if (pontuacao >= 25) m = "🥈 Obreiro";
+      else if (pontuacao >= 10) m = "🥉 Discípulo";
+      document.getElementById("medalha").innerText = m;
+    }
+
+    function usarVidaExtra() {
+      if (moedas >= 150) { moedas -= 150; vidas++; atualizarStatus(); }
+      else { alert("Moedas insuficientes!"); }
+    }
+
+    function resetar() { index = 0; pontuacao = 0; moedas = 0; vidas = 3; mostrarPergunta(); }
 
     function initDevocional() {
       const hoje = new Date();
@@ -124,24 +192,10 @@
       const mes = String(hoje.getMonth() + 1).padStart(2, '0');
       const m = devocionais[mes] || devocionais["01"];
       const d = m.dias[dia] || m.dias["01"];
-
-      document.getElementById('mes-label').innerText = m.nome;
-      document.getElementById('dia-titulo').innerText = d.t;
-      document.getElementById('dev-conteudo').innerHTML = `
-        <div class="bg-black/30 p-5 rounded-2xl italic border-l-4 border-[#E8B923] text-sm leading-relaxed mb-4 text-justify">"${d.e}"</div>
-        <p class="text-center font-bold text-[#E8B923] text-xs">REF: ${d.r}</p>
-        <div class="p-6 bg-[#15803D]/20 rounded-2xl text-center italic font-serif mt-4 border border-white/5">"${d.f}"</div>
-      `;
-      window.cur = d;
+      document.getElementById('dev-conteudo').innerHTML = `<p class="italic text-gray-300">"${d.e}"</p><p class="text-[#E8B923] font-bold text-xs mt-4">REF: ${d.r}</p>`;
     }
 
-    function compartilhar() {
-      const msg = `*Devocional Missão Peru*%0A%0A*${window.cur.t}*%0A%0A"${window.cur.f}"%0A%0AApp: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
-      window.open(`https://api.whatsapp.com/send?text=${msg}`);
-    }
-
-    window.onload = initDevocional;
+    window.onload = () => { initQuiz(); initDevocional(); };
   </script>
 </body>
 </html>
-
