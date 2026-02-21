@@ -18,9 +18,46 @@
         .nav-btn { display: flex; flex-direction: column; align-items: center; color: rgba(255,255,255,0.5); width: 18%; font-size: 8px; font-weight: 900; text-transform: uppercase; }
         .nav-active { color: #E8B923 !important; }
         .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 20px; }
+   @keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} 
     </style>
 </head>
-<body>
+ <body>
+<div id="splash-screen" style="
+position: fixed;
+inset: 0;
+background: #000814;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+transition: opacity 0.6s ease;
+">
+
+<img src="logo-missao-peru.png"
+style="width:120px; animation: zoomIn 1s ease;" />
+
+<h1 style="
+margin-top:20px;
+color:#E8B923;
+font-weight:bold;
+letter-spacing:2px;
+animation: fadeInText 1.5s ease;
+">
+MISSÃO PERU
+</h1>
+
+</div>
+
+<header class="p-6 text-center border-b border-white/5">
     <header class="p-6 text-center border-b border-white/5">
         <img src="logo-missao-peru.png" class="w-20 h-20 rounded-full mx-auto mb-2 border-2 border-[#E8B923]">
         <h1 class="text-xl font-black italic text-[#E8B923] uppercase">Missão Peru</h1>
