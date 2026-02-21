@@ -11,11 +11,10 @@
     .active { display: block; }
     .quiz-btn { background: #0074D9; transition: 0.3s; width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; }
     .quiz-btn:hover { background: #39CCCC; }
-    /* Estilo para o botão ativo no menu */
     .nav-active { color: #E8B923 !important; opacity: 1 !important; }
   </style>
 </head>
-<body class="min-h-screen pb-24">
+<body class="min-h-screen pb-24 text-sm md:text-base">
 
   <div class="bg-gradient-to-b from-[#15803D] to-[#000814] py-6 text-center shadow-lg">
     <img src="logo-missao-peru.png" class="mx-auto w-24 h-24 rounded-full border-4 border-[#E8B923] mb-2 shadow-2xl">
@@ -46,25 +45,63 @@
                 <p>Aqui você acompanha projetos, intercede e se envolve com aquilo que o Senhor está fazendo em Tacna.</p>
                 <p class="font-bold italic text-[#E8B923]">Este não é apenas um espaço digital. É um altar virtual de compromisso.</p>
             </div>
+            
+            <div id="notif-banner" class="mb-6 p-4 bg-[#E8B923]/10 border border-[#E8B923]/30 rounded-2xl hidden">
+                <p class="text-[10px] font-bold uppercase text-[#E8B923] mb-2">🔔 Receber Alerta Diário?</p>
+                <button onclick="ativarNotificacoes()" class="w-full bg-[#E8B923] text-[#000814] py-2 rounded-lg font-black text-[10px] uppercase">ATIVAR NOTIFICAÇÕES</button>
+            </div>
+
             <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs">CONHEÇA NOSSOS PROJETOS</button>
         </div>
     </div>
 
     <div id="palavra" class="section text-center">
-        <h2 class="text-[#E8B923] text-xl font-black uppercase italic mb-6">Devocional Diário</h2>
-        <div class="bg-white/5 p-6 rounded-3xl border border-white/10 text-justify">
-            <p class="text-gray-200 italic">"Lâmpada para os meus pés é tua palavra, e luz para o meu caminho." - Salmos 119:105</p>
-            <div class="mt-6 p-4 bg-[#15803D]/20 rounded-xl border border-[#15803D]">
-                <h3 class="font-bold text-[#E8B923] mb-2 text-sm uppercase">Palavra do Dia</h3>
-                <p class="text-sm">O conteúdo do devocional será atualizado diariamente aqui.</p>
+        <div class="bg-gradient-to-b from-[#15803D]/30 to-transparent p-6 rounded-3xl border border-[#15803D]/50 mb-8">
+            <h2 class="text-[#E8B923] text-2xl font-black uppercase italic mb-1">Devocional Diário</h2>
+            <p id="devocional-data" class="text-[10px] text-white/50 tracking-[0.2em] uppercase font-bold italic">Carregando...</p>
+        </div>
+        <div class="space-y-6 text-left">
+            <div class="bg-white/5 p-6 rounded-2xl border-l-4 border-[#E8B923]">
+                <h3 class="text-[#E8B923] font-black uppercase text-xs mb-2 italic">Tema do Dia</h3>
+                <p id="dev-tema" class="text-xl font-bold leading-tight"></p>
+            </div>
+            <div class="bg-white/5 p-6 rounded-2xl space-y-4 border border-white/5">
+                <div><span class="text-[#E8B923] font-bold text-[10px] uppercase block mb-1">🌱 Introdução</span><p id="dev-intro" class="text-gray-300 text-sm"></p></div>
+                <div class="border-t border-white/10 pt-4"><span class="text-[#E8B923] font-bold text-[10px] uppercase block mb-1">📖 Ensino</span><p id="dev-ensino" class="text-gray-300 text-sm italic"></p></div>
+                <div class="border-t border-white/10 pt-4"><span class="text-[#E8B923] font-bold text-[10px] uppercase block mb-1">💡 Aplicação</span><p id="dev-aplicacao" class="text-gray-300 text-sm"></p></div>
+            </div>
+            <div class="bg-[#E8B923] p-6 rounded-2xl text-[#000814]">
+                <p id="dev-versiculo" class="font-black italic text-lg mb-1"></p>
+                <p id="dev-ref" class="text-xs font-bold uppercase opacity-70"></p>
+                <div class="mt-4 pt-4 border-t border-[#000814]/20"><p id="dev-frase" class="font-bold text-sm"></p></div>
+            </div>
+            <div class="bg-[#15803D] p-6 rounded-2xl shadow-lg border-b-4 border-green-900">
+                <h4 class="font-black text-xs uppercase mb-2 text-white">🙏 Chamado à Ação</h4>
+                <p id="dev-chamado" class="text-sm text-white"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz" class="section text-center">
+        <div class="w-full bg-white/10 h-2 rounded-full mb-6 overflow-hidden border border-white/5">
+            <div id="progresso-barra" class="bg-[#E8B923] h-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+        <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30 shadow-2xl">
+            <h2 id="medalha" class="text-[#E8B923] font-black text-xl mb-4 uppercase italic">Iniciante</h2>
+            <div id="pergunta" class="text-lg font-bold mb-6 text-justify italic">Carregando desafios...</div>
+            <div id="alternativas" class="space-y-3"></div>
+            <div class="mt-4 text-[10px] text-white/50 uppercase font-bold">Questão <span id="pergunta-atual">0</span> de <span id="total-perguntas">0</span></div>
+            <div class="mt-6 space-y-2">
+                <button onclick="pularPergunta()" class="w-full bg-white/10 border border-white/20 py-3 rounded-xl text-[10px] font-bold uppercase">⏭️ Pular Pergunta (50 moedas)</button>
+                <button onclick="usarVidaExtra()" class="w-full bg-red-900/40 border border-red-500 py-3 rounded-xl text-[10px] font-bold uppercase">❤️ Comprar Vida (150 moedas)</button>
             </div>
         </div>
     </div>
 
     <div id="projeto" class="section text-center">
-        <h2 class="text-[#E8B923] text-xl font-black uppercase italic mb-6">Nossos Projetos</h2>
-        <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
-            <p class="text-sm">Conheça o trabalho missionário em Tacna, Peru.</p>
+        <h2 class="text-[#E8B923] text-xl font-black uppercase mb-6 italic">Missões em Tacna</h2>
+        <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+            <p class="text-sm italic">Em breve, fotos e atualizações dos nossos projetos no Peru.</p>
         </div>
     </div>
 
@@ -73,20 +110,9 @@
             <h2 class="text-[#E8B923] text-xl font-black uppercase italic">Clube Missionário</h2>
         </div>
         <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between mb-6">
-            <span class="font-bold text-[#E8B923]">Cursos & E-books</span>
-            <span>🔒</span>
+            <span class="font-bold text-[#E8B923]">Cursos & E-books</span><span>🔒</span>
         </div>
-        <a href="#" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">
-            📝 Cadastro Clube
-        </a>
-    </div>
-
-    <div id="quiz" class="section text-center">
-        <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30">
-            <h2 id="medalha" class="text-[#E8B923] font-black text-xl mb-4 uppercase tracking-tighter italic">Iniciante</h2>
-            <div id="pergunta" class="text-lg font-bold mb-6 text-justify italic">Carregando perguntas sagradas...</div>
-            <div id="alternativas" class="space-y-3"></div>
-        </div>
+        <a href="#" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs">📝 Cadastro Clube</a>
     </div>
 
     <div id="doar" class="section text-center">
@@ -101,81 +127,118 @@
   </main>
 
   <script>
+    /* JAVASCRIPT TODOS JUNTOS */
     let perguntas = []; let index = 0; let pontuacao = 0; let moedas = 0; let vidas = 3;
 
+    // --- Navegação ---
     function showSection(id) {
-      // Esconder todas as seções
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      // Mostrar a seção desejada
       const target = document.getElementById(id);
       if(target) target.classList.add('active');
-
-      // Atualizar cores dos botões do menu
       const buttons = document.querySelectorAll('#navbar button span');
-      buttons.forEach(btn => {
-          btn.classList.remove('nav-active');
-          btn.classList.add('text-white/70');
-      });
-      
-      // Encontrar o botão clicado e marcar como ativo
-      const clickedBtn = event.currentTarget.querySelector('span');
-      clickedBtn.classList.add('nav-active');
-      clickedBtn.classList.remove('text-white/70');
-
+      buttons.forEach(btn => { btn.classList.remove('nav-active'); btn.classList.add('text-white/70'); });
+      const clickedBtn = event ? event.currentTarget.querySelector('span') : null;
+      if(clickedBtn) { clickedBtn.classList.add('nav-active'); clickedBtn.classList.remove('text-white/70'); }
       window.scrollTo(0,0);
     }
 
+    // --- Sistema de Quiz ---
     async function initQuiz() {
       try {
         const res = await fetch('questions.json');
         const data = await res.json();
         perguntas = data.sort(() => Math.random() - 0.5);
         if (perguntas.length > 0) mostrarPergunta();
-      } catch(e) {
-        document.getElementById("pergunta").innerText = "Configure o arquivo questions.json para jogar o quiz.";
-      }
+      } catch(e) { document.getElementById("pergunta").innerText = "Erro ao carregar questions.json."; }
     }
 
     function mostrarPergunta() {
       const q = perguntas[index];
-      if(!q) {
-          document.getElementById("pergunta").innerText = "Você completou todos os desafios!";
-          document.getElementById("alternativas").innerHTML = "";
-          return;
+      const barra = document.getElementById("progresso-barra");
+      if(!q) { 
+        document.getElementById("pergunta").innerText = "Fim dos desafios! Parabéns!"; 
+        document.getElementById("alternativas").innerHTML = "";
+        barra.style.width = "100%"; return; 
       }
       document.getElementById("pergunta").innerText = q.question;
       const container = document.getElementById("alternativas");
       container.innerHTML = "";
       q.options.forEach((opt, i) => {
         const btn = document.createElement("button");
-        btn.innerText = opt;
-        btn.className = "quiz-btn";
+        btn.innerText = opt; btn.className = "quiz-btn";
         btn.onclick = () => verificarResposta(i, q.correct);
         container.appendChild(btn);
       });
+      const total = perguntas.length;
+      barra.style.width = ((index) / total) * 100 + "%";
+      document.getElementById("pergunta-atual").innerText = index + 1;
+      document.getElementById("total-perguntas").innerText = total;
       atualizarStatus();
     }
 
     function verificarResposta(resposta, correta) {
-      if (resposta === correta) {
-        pontuacao++; moedas += 10;
-        index++; mostrarPergunta();
-      } else {
-        vidas--;
-        if (vidas <= 0) { alert("Fim de jogo! Tente novamente."); resetar(); }
-      }
+      if (resposta === correta) { pontuacao++; moedas += 10; index++; mostrarPergunta(); }
+      else { vidas--; if (vidas <= 0) { alert("Fim de jogo!"); resetar(); } }
       atualizarStatus();
+    }
+
+    function pularPergunta() {
+      if (moedas >= 50) { moedas -= 50; index++; mostrarPergunta(); }
+      else { alert("Moedas insuficientes (50 p/ pular)"); }
+    }
+
+    function usarVidaExtra() {
+      if (moedas >= 150) { moedas -= 150; vidas++; atualizarStatus(); alert("Vida restaurada!"); }
+      else { alert("Você precisa de 150 moedas."); }
     }
 
     function atualizarStatus() {
       document.getElementById("moedas").innerText = moedas;
       document.getElementById("vidas").innerText = vidas;
       document.getElementById("pontos").innerText = pontuacao;
+      let m = "Iniciante";
+      if (pontuacao >= 50) m = "🥇 Missionário"; else if (pontuacao >= 10) m = "🥉 Discípulo";
+      document.getElementById("medalha").innerText = m;
     }
 
     function resetar() { index = 0; pontuacao = 0; moedas = 0; vidas = 3; mostrarPergunta(); }
 
-    window.onload = () => { initQuiz(); };
+    // --- Devocional ---
+    async function carregarDevocional() {
+      try {
+        const res = await fetch('devocionais.json');
+        const dados = await res.json();
+        const hoje = new Date();
+        const d = dados[(hoje.getDate() - 1) % dados.length];
+        document.getElementById("devocional-data").innerText = hoje.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+        document.getElementById("dev-tema").innerText = d.tema;
+        document.getElementById("dev-intro").innerText = d.introducao;
+        document.getElementById("dev-ensino").innerText = d.ensino;
+        document.getElementById("dev-aplicacao").innerText = d.aplicacao;
+        document.getElementById("dev-versiculo").innerText = `"${d.versiculo}"`;
+        document.getElementById("dev-ref").innerText = d.referencia;
+        document.getElementById("dev-frase").innerText = `✨ ${d.frase}`;
+        document.getElementById("dev-chamado").innerText = d.chamado;
+      } catch (e) { console.log("Devocional não encontrado."); }
+    }
+
+    // --- Notificações ---
+    function verificarPermissaoNotificacao() {
+      if ("Notification" in window && Notification.permission === "default") {
+        document.getElementById("notif-banner").classList.remove("hidden");
+      }
+    }
+
+    function ativarNotificacoes() {
+      Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+          document.getElementById("notif-banner").classList.add("hidden");
+          new Notification("Missão Peru", { body: "Notificações ativadas!", icon: "logo-missao-peru.png" });
+        }
+      });
+    }
+
+    window.onload = () => { initQuiz(); carregarDevocional(); verificarPermissaoNotificacao(); };
   </script>
 </body>
 </html>
