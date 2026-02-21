@@ -1,38 +1,18 @@
-const CACHE_NAME = 'missao-peru-v2';
-const ASSETS = [
-  'index.html',
-  'devocionais.json',
-  'questions.json',
-  'logo-missao-peru.png',
-  'manifest.json'
-];
+function compartilharDevocional() {
+    // Busca os textos diretamente dos elementos da tela
+    const tema = document.getElementById("dev-tema").innerText;
+    const versiculo = document.getElementById("dev-versiculo").innerText;
+    const referencia = document.getElementById("dev-ref").innerText;
+    const linkApp = window.location.href; 
 
-// Instala o Service Worker e armazena os arquivos essenciais no cache
-self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('Missão Peru: Arquivos armazenados para modo offline');
-      return cache.addAll(ASSETS);
-    })
-  );
-});
+    // Monta a mensagem formatada para o WhatsApp
+    const mensagem = `*Devocional Missão Peru* 🇵🇪\n\n` +
+                     `*Tema:* ${tema}\n\n` +
+                     `${versiculo}\n` +
+                     `(_${referencia}_)\n\n` +
+                     `📖 Leia o devocional completo no App:\n${linkApp}`;
 
-// Remove caches antigos quando houver atualizações
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
-  );
-});
-
-// Tenta carregar do cache primeiro, se falhar busca na rede
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
-  );
-});
+    // Abre o WhatsApp com a mensagem pronta
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
