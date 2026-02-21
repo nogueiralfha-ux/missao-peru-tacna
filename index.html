@@ -47,7 +47,7 @@
     <div id="projeto" class="section">
         <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
             <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic text-justify">Nossa Jornada Missionária</h2>
-            <p class="text-sm text-gray-200 leading-relaxed mb-4">Desde de quando Deus nos chamou, para cumprir o "IDE", estamos envolvidos com o Reino de Deus, e por 2 oportunidades que nos permitiu em 1999 e 2008, levamos a Palavra ao Peru, pois acreditamos, quero deixar essa frase "DFomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil,e Nas Naçoes".</p>
+            <p class="text-sm text-gray-200 leading-relaxed mb-4">Desde de quando Deus nos chamou, para cumprir o "IDE", estamos envolvidos com o Reino de Deus, e por 2 oportunidades que nos permitiu em 1999 e 2008, levamos a Palavra ao Peru, pois acreditamos, quero deixar essa frase "Fomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil,e Nas Naçoes".</p>
             <button onclick="showSection('clube')" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-[10px] uppercase">Ver Cursos e E-books</button>
         </div>
     </div>
@@ -84,14 +84,43 @@
             <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black text-xs">ASSINE PARA LIBERAR TUDO</button>
         </div>
     </div>
+<div id="doar" class="section p-6 max-w-md mx-auto text-center">
+    <div class="mb-8">
+        <h2 class="text-[#E8B923] text-2xl font-black uppercase italic tracking-tighter">Semente Missionária</h2>
+        <p class="text-xs text-gray-400 mt-2">Sua contribuição sustenta a Missão Peru</p>
+    </div>
 
-    <div id="doar" class="section text-center">
-        <h2 class="text-[#E8B923] text-2xl font-bold mb-6 italic">Apoie a Missão</h2>
-        <div class="bg-[#15803D] p-8 rounded-3xl mb-4 shadow-xl">
-            <p class="text-[10px] font-bold mb-2">PIX (CPF)</p>
-            <p class="text-xl font-mono font-bold mb-4">05475258856</p>
-            <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#000814] px-6 py-2 rounded-full font-bold text-[10px]">COPIAR CHAVE</button>
+    <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl mb-6">
+        <h3 class="text-white font-bold mb-2">Ser Apoiador Mensal</h3>
+        <p class="text-[10px] text-gray-200 mb-4 italic">Compromisso de fidelidade por 12 meses para manter o campo missionário e este App.</p>
+        
+        <a href="LINK_DO_SEU_FORMULARIO_AQUI" target="_blank" class="block w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs shadow-lg active:scale-95 transition-all">
+            📝 CLIQUE PARA CADASTRAR
+        </a>
+    </div>
+
+    <div class="flex items-center gap-4 my-6 opacity-30">
+        <div class="h-[1px] bg-white flex-1"></div>
+        <span class="text-[10px] font-bold">OU</span>
+        <div class="h-[1px] bg-white flex-1"></div>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+        <h3 class="text-gray-300 text-sm font-bold mb-4 italic">Doar agora, única vez?</h3>
+        
+        <div class="bg-black/40 p-4 rounded-2xl border-dashed border border-white/20 mb-4">
+            <p class="text-[9px] text-[#E8B923] font-bold uppercase mb-1">Chave PIX (CPF)</p>
+            <p class="text-lg font-mono font-bold text-white">05475258856</p>
         </div>
+
+        <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada! Deus abençoe sua oferta única.')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase hover:bg-[#15803D]/10 transition-all">
+            COPIAR CHAVE PIX
+        </button>
+    </div>
+
+    <p class="mt-8 text-[9px] text-gray-500 italic">"Deus ama ao que dá com alegria." - 2 Coríntios 9:7</p>
+</div>
+    
     </div>
 
   </main>
@@ -111,7 +140,7 @@
     // DEVOCIONAL JANEIRO
     const devocionais = {
       "01": { nome: "Janeiro - Recomeço e Esperança", dias: {
-          "01": { t: "Novo Começo", e: "Misericórdias renovadas.", r: "Apocalipse 21:5a", f: "Cada amanhecer é um convite." }
+          "01": { t: "Novo Começo", i:"Feliz Ano Novo! Hoje, ao abrirmos a primeira página de um novo calendário, somos presenteados com a sensação palpável de um novo começo. É um convite para deixar para trás o que passou e abraçar o futuro com um coração cheio de esperança, sabendo que Deus nos oferece sempre a chance de recomeçar."  e: "Misericórdias renovadas,A Bíblia está repleta de histórias de recomeços. Deus é um Deus de novas oportunidades. Em Lamentações 3:22-23, somos lembrados que "as misericórdias do Senhor são a causa de não sermos consumidos, porque as suas misericórdias não têm fim; renovam-se cada manhã". Este novo ano é uma manifestação dessa misericórdia renovada. Ele nos convida a depositar nossa confiança Nele, crendo que Seus planos para nós são de paz e esperança (Jeremias 29:11)", a:"Aplicação: Como você pode encarar este novo ano como uma oportunidade dada por Deus? Quais áreas da sua vida você gostaria de ver renovadas? Reserve um momento para refletir sobre as lições do ano que passou e identifique uma ou duas coisas que você deseja fazer diferente, com a ajuda de Deus, neste novo ciclo." r: "Apocalipse 21:5a", f: "Cada amanhecer é um convite.",c:"Chamado à Ação: Inicie este dia com uma oração, entregando seus planos e sonhos para este novo ano a Deus. Peça a Ele que renove suas forças e sua esperança, e que o guie em cada passo do caminho." }
         }}
     };
 
@@ -199,3 +228,4 @@
   </script>
 </body>
 </html>
+
