@@ -9,3 +9,12 @@ function ativarNotificacoes() {
     }
   });
 }
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const splash = document.getElementById("splash-screen");
+    if (splash) {
+      splash.style.opacity = "0";
+      setTimeout(() => splash.remove(), 600);
+    }
+  }, 1200);
+});
