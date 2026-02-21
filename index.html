@@ -6,10 +6,10 @@
   <title>Missão Peru</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, sans-serif; scroll-behavior: smooth; background: #000814; color: white; }
+    body { font-family: system-ui, sans-serif; background: #000814; color: white; }
     .section { display: none; }
     .active { display: block; }
-    .quiz-btn { background: #0074D9; transition: 0.3s; }
+    .quiz-btn { background: #0074D9; transition: 0.3s; width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; }
     .quiz-btn:hover { background: #39CCCC; }
   </style>
 </head>
@@ -18,16 +18,16 @@
   <div class="bg-gradient-to-b from-[#15803D] to-[#000814] py-6 text-center shadow-lg">
     <img src="logo-missao-peru.png" class="mx-auto w-20 h-20 rounded-full border-2 border-[#E8B923] mb-2 shadow-2xl">
     <h1 class="text-xl font-bold text-[#E8B923]">Missão Peru</h1>
-    <div class="flex justify-center gap-4 mt-2 text-[9px] font-bold uppercase">
+    <div class="flex justify-center gap-4 mt-2 text-[10px] font-bold uppercase tracking-widest text-white/80">
         <span>🪙 <span id="moedas">0</span></span>
         <span>❤️ <span id="vidas">3</span></span>
         <span>⭐ <span id="pontos">0</span></span>
     </div>
   </div>
 
-  <div class="fixed bottom-0 left-0 right-0 bg-[#000814] border-t border-[#15803D] flex justify-around py-4 z-50">
+  <div class="fixed bottom-0 left-0 right-0 bg-[#000814] border-t border-[#15803D] flex justify-around py-4 z-50 shadow-2xl">
     <button onclick="showSection('home')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">INÍCIO</span></button>
-    <button onclick="showSection('projeto')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">PROJETOS</span></button>
+    <button onclick="showSection('projeto')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">PROJETO</span></button>
     <button onclick="showSection('palavra')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">BÍBLIA</span></button>
     <button onclick="showSection('quiz')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">DESAFIO</span></button>
     <button onclick="showSection('clube')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">CLUBE</span></button>
@@ -37,29 +37,23 @@
   <main class="p-6 max-w-2xl mx-auto">
     <div id="home" class="section active text-center">
         <div class="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-xl">
-            <h2 class="text-2xl font-bold text-[#E8B923] mb-4 italic">Recomeço e Esperança</h2>
-            <p class="text-sm text-gray-300 mb-8 italic">"As misericórdias do Senhor renovam-se cada manhã."</p>
+            <h2 class="text-2xl font-bold text-[#E8B923] mb-4 italic">Bem-vindo à Missão</h2>
+            <p class="text-sm text-gray-300 mb-8">Estamos em Tacna para transformar vidas através do Evangelho.</p>
             <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-sm">📖 CONHEÇA NOSSOS PROJETOS</button>
         </div>
     </div>
 
-    <div id="projeto" class="section">
-        <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
-            <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic">Nossa Jornada</h2>
-            <p class="text-sm text-gray-200 leading-relaxed text-justify italic mb-6">
-                "Fomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil e nas Nações."
-            </p>
-            <p class="text-xs text-gray-400 text-justify">Desde 1999 e 2008, levamos a Palavra ao Peru, cumprindo o IDE.</p>
+    <div id="clube" class="section text-center">
+        <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
+            <h2 class="text-[#E8B923] text-xl font-black uppercase italic">Clube Missionário</h2>
         </div>
-    </div>
-
-    <div id="palavra" class="section">
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
-            <span id="mes-label" class="bg-[#15803D] text-[10px] px-3 py-1 rounded-full uppercase">Janeiro</span>
-            <h2 id="dia-titulo" class="text-[#E8B923] text-xl font-bold mt-4">Caminhos do Coração</h2>
-            <div id="dev-conteudo" class="my-6 space-y-4 text-justify text-sm"></div>
-            <button onclick="compartilhar()" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-xs uppercase">📲 Compartilhar</button>
+        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between mb-6">
+            <span class="font-bold text-[#E8B923]">Benefícios Exclusivos</span>
+            <span>🔒</span>
         </div>
+        <a href="LINK_DO_CADASTRO_CLUBE" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg">
+            📝 Cadastro para os beneficios do clube
+        </a>
     </div>
 
     <div id="quiz" class="section text-center">
@@ -67,62 +61,36 @@
             <h2 id="medalha" class="text-[#E8B923] font-black text-lg mb-4 uppercase">Iniciante</h2>
             <div id="pergunta" class="text-md font-bold mb-6 italic">Carregando perguntas...</div>
             <div id="alternativas" class="space-y-2"></div>
-            <button onclick="usarVidaExtra()" class="w-full mt-6 bg-red-900/30 border border-red-500 py-2 rounded-xl text-[10px] font-bold">❤️ COMPRAR VIDA (150 moedas)</button>
+            <button onclick="usarVidaExtra()" class="w-full mt-6 bg-red-900/30 border border-red-500 py-2 rounded-xl text-[10px] font-bold uppercase">❤️ COMPRAR VIDA (150 moedas)</button>
         </div>
     </div>
 
-    <div id="clube" class="section text-center">
-        <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
-            <h2 class="text-[#E8B923] text-xl font-black uppercase">Clube Missionário</h2>
+    <div id="projeto" class="section">
+        <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
+            <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic text-justify">Nossa Jornada</h2>
+            <p class="text-sm text-gray-200 leading-relaxed text-justify italic mb-6">
+                "Fomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil e nas Nações."
+            </p>
         </div>
-        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between mb-4">
-            <span class="font-bold text-[#E8B923]">Cursos & E-books</span>
-            <span>🔒</span>
-        </div>
-        <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black text-xs uppercase italic">Quero ser Assinante</button>
     </div>
 
     <div id="doar" class="section text-center">
-        <h2 class="text-[#E8B923] text-xl font-bold mb-6">Semente Missionária</h2>
-        <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] shadow-lg mb-6">
-            <h3 class="font-bold mb-2 uppercase text-sm">Ser Apoiador Mensal</h3>
+        <h2 class="text-[#E8B923] text-xl font-bold mb-6 italic uppercase">Apoio Missionário</h2>
+        <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
+            <h3 class="font-bold mb-2">Ser Apoiador Mensal</h3>
             <p class="text-[10px] text-gray-200 mb-4">Compromisso de fidelidade por 12 meses.</p>
-            <a href="https://forms.gle/SEU_LINK" target="_blank" class="block w-full bg-[#E8B923] text-[#0A2540] py-3 rounded-xl font-black uppercase text-[10px]">📝 CADASTRAR AGORA</a>
+            <a href="LINK_DO_FORMULARIO_APOIADOR" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-3 rounded-xl font-black uppercase text-[10px]">CADASTRAR COMO APOIADOR</a>
         </div>
         <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
-            <h3 class="text-sm font-bold mb-4 italic">Doar agora, única vez?</h3>
-            <p class="text-[10px] text-[#E8B923] font-bold mb-1 uppercase tracking-widest">Chave PIX (CPF)</p>
-            <p class="text-lg font-mono font-bold mb-4 text-white">05475258856</p>
-            <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="w-full border border-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase">Copiar Chave</button>
+            <h3 class="text-sm font-bold mb-2 italic">Doar agora, única vez?</h3>
+            <p class="text-lg font-mono font-bold mb-4 text-[#E8B923]">05475258856</p>
+            <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="w-full border border-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase">Copiar Chave PIX</button>
         </div>
     </div>
   </main>
 
-  <audio id="audioCorrect" src="assets/audio/correct.mp3"></audio>
-  <audio id="audioWrong" src="assets/audio/wrong.mp3"></audio>
-
   <script>
     let perguntas = []; let index = 0; let pontuacao = 0; let moedas = 0; let streak = 0; let vidas = 3;
-
-    const devocionais = {
-      "01": { 
-        nome: "Janeiro - Recomeço e Esperança", 
-        dias: {
-          "01": { 
-            t: "A Promessa de um Novo Começo", 
-            txt: "Deus é um Deus de novas oportunidades. Lamentações 3:22-23 lembra que as misericórdias do Senhor renovam-se cada manhã. Ele nos convida a depositar nossa confiança Nele.",
-            ref: "Apocalipse 21:5a",
-            frase: "Cada amanhecer é um convite."
-          }
-        }
-      }
-    };
-
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      window.scrollTo(0,0);
-    }
 
     async function initQuiz() {
       try {
@@ -130,84 +98,61 @@
         const data = await res.json();
         perguntas = data.sort(() => Math.random() - 0.5);
         mostrarPergunta();
-      } catch(e) { console.log("Erro ao carregar questions.json"); }
+      } catch(e) { 
+        document.getElementById("pergunta").innerText = "Erro ao carregar arquivo questions.json";
+        console.error(e); 
+      }
     }
 
     function mostrarPergunta() {
-      const q = perguntas[index]; if(!q) return;
+      const q = perguntas[index];
+      if(!q) return;
       document.getElementById("pergunta").innerText = q.question;
       const container = document.getElementById("alternativas");
       container.innerHTML = "";
       q.options.forEach((opt, i) => {
         const btn = document.createElement("button");
         btn.innerText = opt;
-        btn.className = "quiz-btn w-full py-4 rounded-xl font-bold text-sm mb-2";
+        btn.className = "quiz-btn";
         btn.onclick = () => verificarResposta(i, q.correct);
         container.appendChild(btn);
       });
       atualizarStatus();
     }
 
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0,0);
+    }
+
     function verificarResposta(resposta, correta) {
       if (resposta === correta) {
-        document.getElementById("audioCorrect").play();
         pontuacao++; moedas += 10; streak++;
-        if (streak === 5) { moedas += 50; alert("🔥 BÔNUS +50 MOEDAS!"); streak = 0; }
         index++; mostrarPergunta();
       } else {
-        document.getElementById("audioWrong").play();
         vidas--; streak = 0;
-        if (vidas <= 0) { alert("Fim de jogo! Pontos: " + pontuacao); resetar(); }
+        if (vidas <= 0) { alert("Fim de jogo!"); resetar(); }
       }
       atualizarStatus();
     }
 
     function atualizarStatus() {
-      document.getElementById("pontos").innerText = pontuacao;
       document.getElementById("moedas").innerText = moedas;
       document.getElementById("vidas").innerText = vidas;
+      document.getElementById("pontos").innerText = pontuacao;
       atualizarMedalha();
     }
 
     function atualizarMedalha() {
       let m = "Iniciante";
-      if (pontuacao >= 100) m = "🔥 Apóstolo";
-      else if (pontuacao >= 75) m = "👑 Teólogo";
-      else if (pontuacao >= 50) m = "🥇 Missionário";
-      else if (pontuacao >= 25) m = "🥈 Obreiro";
-      else if (pontuacao >= 10) m = "🥉 Discípulo";
+      if (pontuacao >= 10) m = "🥉 Discípulo";
       document.getElementById("medalha").innerText = m;
-    }
-
-    function usarVidaExtra() {
-      if (moedas >= 150) { moedas -= 150; vidas++; atualizarStatus(); }
-      else { alert("Moedas insuficientes!"); }
     }
 
     function resetar() { index = 0; pontuacao = 0; moedas = 0; vidas = 3; mostrarPergunta(); }
 
-    function initDevocional() {
-      const hoje = new Date();
-      const dia = String(hoje.getDate()).padStart(2, '0');
-      const mes = String(hoje.getMonth() + 1).padStart(2, '0');
-      const m = devocionais[mes] || devocionais["01"];
-      const d = m.dias[dia] || m.dias["01"];
-      document.getElementById('mes-label').innerText = m.nome;
-      document.getElementById('dia-titulo').innerText = d.t;
-      document.getElementById('dev-conteudo').innerHTML = `
-        <p class="italic text-gray-300">"${d.txt}"</p>
-        <p class="text-[#E8B923] font-bold text-center text-[10px] mt-4 uppercase">Ref: ${d.ref}</p>
-        <div class="bg-[#15803D]/20 p-4 rounded-xl text-center italic font-serif mt-2 border border-white/5">"${d.frase}"</div>
-      `;
-      window.cur = d;
-    }
-
-    function compartilhar() {
-      const msg = `*Devocional Missão Peru*%0A%0A*${window.cur.t}*%0A%0A"${window.cur.frase}"%0A%0AApp: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
-      window.open(`https://api.whatsapp.com/send?text=${msg}`);
-    }
-
-    window.onload = () => { initQuiz(); initDevocional(); };
+    window.onload = () => { initQuiz(); };
   </script>
 </body>
 </html>
