@@ -118,8 +118,27 @@ class="bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs 
         }
         window.onload = () => { carregarDevocional(); };
     </script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js")
+      .then(function () {
+        console.log("Service Worker registrado com sucesso!");
+      })
+      .catch(function (error) {
+        console.log("Erro ao registrar Service Worker:", error);
+      });
+  });
+}
+</script>
+
 </body>
 </html>
+    </script>
+</body>
+</html>
+
 
 
 
