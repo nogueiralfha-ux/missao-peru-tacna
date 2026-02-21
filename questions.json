@@ -2,7 +2,7 @@
   {
     "id": 1,
     "question": "Em que ano a Missão Peru iniciou suas primeiras atividades?",
-    "options": ["1990", "1993", "2000", "2008"],
+    "options": ["1990", "1995", "2000", "2008"],
     "correct": 1,
     "difficulty": "easy",
     "category": "Missão Peru"
@@ -79,4 +79,876 @@
     "difficulty": "medium",
     "category": "Devocional"
   }
-]
+
+,
+  {
+    "id": 11,
+    "question": "Quem foi o homem que Deus chamou para sair da sua terra e ir para uma nação desconhecida?",
+    "options": ["Ló", "Abraão", "Isaque", "Jacó"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 12,
+    "question": "A Missão Peru teve um marco importante em 2008. O que este ano representa na nossa história?",
+    "options": ["Início do projeto", "Consolidação e expansão", "Fim das viagens", "Mudança para o Brasil"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 13,
+    "question": "Qual é o primeiro livro da Bíblia?",
+    "options": ["Êxodo", "Mateus", "Gênesis", "Apocalipse"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 14,
+    "question": "Quantas vidas o jogador tem ao iniciar o Desafio Bíblico no App?",
+    "options": ["1", "3", "5", "10"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 15,
+    "question": "No devocional de Janeiro, qual é a 'âncora da alma' mencionada no Dia 2?",
+    "options": ["A oração", "A caridade", "A esperança em Deus", "O jejum"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 16,
+    "question": "Qual o custo em moedas para comprar uma 'Vida Extra' no jogo?",
+    "options": ["50", "100", "150", "200"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 17,
+    "question": "Quem escreveu a maioria das cartas (epístolas) do Novo Testamento?",
+    "options": ["Pedro", "João", "Tiago", "Paulo"],
+    "correct": 3,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 18,
+    "question": "Qual o bónus de moedas recebido ao acertar uma sequência (streak) de 5 perguntas?",
+    "options": ["10", "25", "50", "100"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 19,
+    "question": "Em 1993, o projeto deu os seus primeiros passos. Qual era o sentimento principal descrito na nossa história?",
+    "options": ["Medo", "Recomeço e Fé", "Dúvida", "Cansaço"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 20,
+    "question": "Qual é o 'Grande Mandamento' ensinado por Jesus?",
+    "options": ["Construir templos", "Amar a Deus e ao próximo", "Fazer sacrifícios", "Viajar pelo mundo"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Fundamentos"
+  }
+,
+  {
+    "id": 21,
+    "question": "Qual é o 'Ide' de Jesus registado em Mateus 28:19?",
+    "options": ["Ide e construam barcos", "Ide e façam discípulos de todas as nações", "Ide e fiquem em casa", "Ide e esperem por um sinal"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 22,
+    "question": "A Missão Peru foca em três pilares. Qual destes NÃO faz parte da nossa visão?",
+    "options": ["Evangelismo", "Cuidado Social", "Plantação de Igrejas", "Comércio de Antiguidades"],
+    "correct": 3,
+    "difficulty": "easy",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 23,
+    "question": "Quem foi o companheiro de Paulo na sua primeira viagem missionária?",
+    "options": ["Barnabé", "Mateus", "Lucas", "Tiago"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 24,
+    "question": "No devocional 'Caminhos do Coração', o que significa 'aquietar a alma'?",
+    "options": ["Dormir mais", "Sintonizar com os céus e ouvir a Deus", "Ignorar os problemas", "Não falar com ninguém"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 25,
+    "question": "Qual o nome do mar que Moisés dividiu pelo poder de Deus?",
+    "options": ["Mar Morto", "Mar Mediterrâneo", "Mar Vermelho", "Mar da Galileia"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 26,
+    "question": "Quantas moedas ganha o jogador ao acertar uma pergunta comum?",
+    "options": ["5", "10", "20", "50"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 27,
+    "question": "O que acontece se o jogador perder as 3 vidas no Desafio?",
+    "options": ["Ganha um bónus", "O jogo é resetado", "O telemóvel desliga", "Nada acontece"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 28,
+    "question": "Em que livro bíblico encontramos a história da Torre de Babel?",
+    "options": ["Êxodo", "Gênesis", "Levítico", "Números"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 29,
+    "question": "Complete o versículo: 'Lâmpada para os meus pés é a tua palavra e luz para o meu...'",
+    "options": ["Quarto", "Caminho", "Coração", "Mundo"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 30,
+    "question": "Qual destes é um objetivo do Clube Missionário?",
+    "options": ["Venda de roupas", "Manter o App no ar e apoiar missões", "Organizar festas", "Jogar futebol"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 31,
+    "question": "Quem foi o apóstolo que andou sobre as águas com Jesus por um momento?",
+    "options": ["João", "André", "Pedro", "Tiago"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 32,
+    "question": "Qual é o tema do Mês 2 do devocional anual?",
+    "options": ["Oração", "Crescimento na Palavra", "Gratidão", "Amor"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 33,
+    "question": "Qual cidade peruana é um dos marcos históricos da nossa missão?",
+    "options": ["Lima", "Cusco", "Tacna", "Trujillo"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 34,
+    "question": "Quantas moedas são necessárias para comprar uma vida extra?",
+    "options": ["100", "150", "200", "250"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 35,
+    "question": "Quem derrotou o gigante Golias?",
+    "options": ["Saul", "Salomão", "Davi", "Sansão"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 36,
+    "question": "O que é o 'Clube Missionário'?",
+    "options": ["Um grupo de cinema", "Um ecossistema de cursos e apoio missionário", "Uma loja de livros", "Um site de notícias"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 37,
+    "question": "Qual o bónus por uma sequência de 5 acertos?",
+    "options": ["20 moedas", "50 moedas", "100 moedas", "1 vida"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 38,
+    "question": "Na Bíblia, quem foi levado por um redemoinho ao céu?",
+    "options": ["Moisés", "Elias", "Eliseu", "Enoque"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 39,
+    "question": "Qual é a chave PIX para apoiar a Missão Peru?",
+    "options": ["Telemóvel", "E-mail", "CPF 05475258856", "CNPJ"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 40,
+    "question": "Quem é o autor do devocional 'Caminhos do Coração'?",
+    "options": ["Equipe Ministerial", "Um historiador", "Um filósofo", "Desconhecido"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 41,
+    "question": "Qual animal falou com Balaão no caminho?",
+    "options": ["Leão", "Cordeiro", "Jumenta", "Serpente"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 42,
+    "question": "Onde Jesus nasceu?",
+    "options": ["Nazaré", "Jerusalém", "Belém", "Jericó"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 43,
+    "question": "Qual o nome da primeira mulher criada por Deus?",
+    "options": ["Sara", "Rute", "Eva", "Maria"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 44,
+    "question": "Quem construiu a arca para o dilúvio?",
+    "options": ["Noé", "Abraão", "Ló", "Isaque"],
+    "correct": 0,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 45,
+    "question": "Qual discípulo traiu Jesus por 30 moedas de prata?",
+    "options": ["Pedro", "Judas Iscariotes", "Tomé", "Filipe"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 46,
+    "question": "Quem foi jogado na cova dos leões?",
+    "options": ["José", "Daniel", "Sadraque", "Mesaque"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 47,
+    "question": "Qual o homem mais forte da Bíblia?",
+    "options": ["Gideão", "Sansão", "Balaão", "Golias"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 48,
+    "question": "Quantos dias e noites Jesus jejuou no deserto?",
+    "options": ["7", "12", "40", "100"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 49,
+    "question": "Quem recebeu os Dez Mandamentos no Monte Sinai?",
+    "options": ["Arão", "Josué", "Moisés", "Calebe"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 50,
+    "question": "Qual a medalha recebida ao atingir 50 pontos no Desafio?",
+    "options": ["Discípulo", "Obreiro", "Missionário", "Teólogo"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  }
+,
+  {
+    "id": 51,
+    "question": "Qual é o tema do Mês 3 do devocional 'Caminhos do Coração'?",
+    "options": ["Crescimento", "Caminhada em Oração", "Perdão", "Missões"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 52,
+    "question": "Qual destas cidades NÃO é mencionada como destino das viagens de Paulo?",
+    "options": ["Éfeso", "Filipos", "Roma", "Tacna"],
+    "correct": 3,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 53,
+    "question": "O que o bónus de 'Sequência' (Streak) ensina ao jogador no App?",
+    "options": ["A desistir", "A importância da constância", "A jogar rápido", "A gastar moedas"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 54,
+    "question": "Quem foi a mulher que escondeu os espias em Jericó?",
+    "options": ["Débora", "Raabe", "Rute", "Ester"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 55,
+    "question": "Qual é o foco do Mês 4 do devocional anual?",
+    "options": ["Gratidão e Provisão Divina", "Batalha Espiritual", "Dízimos", "Jejum"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 56,
+    "question": "Quantos livros tem o Novo Testamento?",
+    "options": ["27", "39", "66", "12"],
+    "correct": 0,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 57,
+    "question": "Em que ano a Missão Peru teve o seu segundo grande marco histórico?",
+    "options": ["1993", "1999", "2005", "2010"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 58,
+    "question": "Qual o nome do jardim onde Jesus orou antes de ser preso?",
+    "options": ["Éden", "Getsemani", "Jericó", "Carmelo"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 59,
+    "question": "O curso 'Estratégias Transculturais' no Clube serve para:",
+    "options": ["Aprender Espanhol", "Comunicar o Evangelho em outras culturas", "Fazer turismo", "Culinária"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 60,
+    "question": "Qual o 'Menor Versículo' da Bíblia (em português)?",
+    "options": ["Jesus chorou.", "Deus é amor.", "No princípio.", "Orem sem cessar."],
+    "correct": 0,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 61,
+    "question": "Qual é o tema do Mês 5 do devocional?",
+    "options": ["Amor ao Próximo em Ação", "Fé nos Desafios", "Paz Interior", "Missões Urbanas"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 62,
+    "question": "Quem foi vendido pelos irmãos como escravo para o Egito?",
+    "options": ["Benjamim", "José", "Levi", "Judá"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 63,
+    "question": "O que a Bíblia diz ser 'o princípio da sabedoria'?",
+    "options": ["Ler muitos livros", "O temor do Senhor", "Fazer faculdade", "Ter muitos bens"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 64,
+    "question": "Qual destas medalhas vem logo após a de 'Missionário'?",
+    "options": ["Obreiro", "Teólogo", "Apóstolo", "Mestre"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 65,
+    "question": "Qual profeta foi engolido por um grande peixe?",
+    "options": ["Daniel", "Jonas", "Amós", "Habacuque"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 66,
+    "question": "O tema de Junho (Mês 6) no devocional é:",
+    "options": ["Fé em Tempos de Desafio", "Colheita", "Prosperidade", "Família"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 67,
+    "question": "Quem escreveu o livro de Salmos (a maior parte)?",
+    "options": ["Salomão", "Davi", "Asafe", "Moisés"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 68,
+    "question": "Quantas moedas o bónus de streak 5 adiciona?",
+    "options": ["10", "50", "150", "500"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 69,
+    "question": "Qual o primeiro milagre de Jesus registado?",
+    "options": ["Cura do cego", "Multiplicação dos pães", "Transformação de água em vinho", "Ressurreição de Lázaro"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 70,
+    "question": "O que significa 'Missionário' no contexto da Missão Peru?",
+    "options": ["Alguém que viaja", "Uma testemunha da graça de Deus enviada", "Um funcionário", "Um turista religioso"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 71,
+    "question": "Qual é a 'Armadura de Deus' mencionada em Efésios 6?",
+    "options": ["Física", "Financeira", "Espiritual", "Política"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 72,
+    "question": "Qual é o tema do Mês 7 no planejamento anual?",
+    "options": ["Propósito e Vocação", "Silêncio de Deus", "Música Cristã", "Liderança"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 73,
+    "question": "Quem subiu ao Monte Carmelo para desafiar os profetas de Baal?",
+    "options": ["Eliseu", "Elias", "Samuel", "Natã"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 74,
+    "question": "O que representa a 'moeda' no nosso Desafio Bíblico?",
+    "options": ["Riqueza pessoal", "Progresso no aprendizado e recursos no App", "Troca por dinheiro real", "Apenas decoração"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 75,
+    "question": "Atingir 75 pontos dá ao jogador qual título?",
+    "options": ["Obreiro", "Missionário", "Teólogo", "Apóstolo"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 76,
+    "question": "Quem foi a primeira pessoa a ver Jesus ressuscitado?",
+    "options": ["Pedro", "João", "Maria Madalena", "Tiago"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 77,
+    "question": "O Mês 8 foca em qual processo vital para o cristão?",
+    "options": ["Perdão e Reconciliação", "Trabalho", "Descanso", "Estudo"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 78,
+    "question": "Qual o nome do apóstolo que era cobrador de impostos?",
+    "options": ["André", "Mateus", "Bartolomeu", "Simão"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 79,
+    "question": "O que simboliza a 'Luz' no devocional de Janeiro?",
+    "options": ["O sol de Tacna", "A presença de Deus dissipando a escuridão", "Lâmpadas elétricas", "Conhecimento humano"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 80,
+    "question": "Qual destes NÃO é um e-book oferecido pelo Clube?",
+    "options": ["Caminhos do Coração", "Manual do Missionário", "Receitas do Peru", "Fundamentos da Fé"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 81,
+    "question": "Quem disse: 'Eu e a minha casa serviremos ao Senhor'?",
+    "options": ["Moisés", "Josué", "Calebe", "Gideão"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 82,
+    "question": "O Mês 9 do devocional medita sobre:",
+    "options": ["Frutificação do Espírito", "Dons de Línguas", "História da Igreja", "Casamento"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 83,
+    "question": "Qual é a categoria das perguntas sobre dízimos e ofertas?",
+    "options": ["Bíblia Geral", "Finanças Bíblicas", "Escatologia", "Missões"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 84,
+    "question": "Quantos anos o povo de Israel peregrinou no deserto?",
+    "options": ["7", "12", "40", "100"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 85,
+    "question": "O que inspira o Mês 10 (Outubro)?",
+    "options": ["Testemunho e Missão", "Reforma Protestante", "Finanças", "Crianças"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 86,
+    "question": "Quem foi o sucessor de Moisés na liderança de Israel?",
+    "options": ["Arão", "Josué", "Calebe", "Eleazar"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 87,
+    "question": "A medalha de 'Teólogo' representa:",
+    "options": ["Alguém que não sabe nada", "Conhecimento profundo das Escrituras", "Apenas sorte no jogo", "Que o jogador desistiu"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 88,
+    "question": "Qual o tema de Novembro (Mês 11)?",
+    "options": ["Esperança na Eternidade", "Natal", "Gratidão", "Paz"],
+    "correct": 0,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 89,
+    "question": "Quem foi a mulher que julgou Israel?",
+    "options": ["Ester", "Débora", "Jael", "Dalila"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 90,
+    "question": "O que a Missão Peru pede em oração na aba 'Oração'?",
+    "options": ["Pelas famílias do Peru e expansão da obra", "Por chuvas", "Por feriados", "Por viagens de férias"],
+    "correct": 0,
+    "difficulty": "easy",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 91,
+    "question": "Qual o tema de Dezembro (Mês 12)?",
+    "options": ["Celebração e Reflexão", "Férias", "Mudança", "Viagens"],
+    "correct": 0,
+    "difficulty": "easy",
+    "category": "Devocional"
+  },
+  {
+    "id": 92,
+    "question": "Quantos discípulos Jesus escolheu inicialmente?",
+    "options": ["3", "7", "12", "70"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 93,
+    "question": "Onde fica o link para 'Assinar Mensalmente'?",
+    "options": ["Na aba Bíblia", "Na aba Doar", "Na Home", "No Quiz"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 94,
+    "question": "Quem interpretou o sonho do Faraó no Egito?",
+    "options": ["Moisés", "José", "Daniel", "Neemias"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 95,
+    "question": "Qual é a Frase de Impacto do Dia 1 de Janeiro?",
+    "options": ["Deus é Fiel", "Em Cristo, cada amanhecer é um convite para um novo começo", "Tudo posso naquele que me fortalece", "O Senhor é meu pastor"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Devocional"
+  },
+  {
+    "id": 96,
+    "question": "Qual o nome do gigante que Davi enfrentou?",
+    "options": ["Golias", "Anaque", "Og", "Sihon"],
+    "correct": 0,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 97,
+    "question": "O 'Clube Missionário' é exclusivo para quem?",
+    "options": ["Pastores", "Assinantes parceiros da Missão", "Apenas peruanos", "Crianças"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 98,
+    "question": "Quem foi arrebatado aos céus num carro de fogo?",
+    "options": ["Moisés", "Enoque", "Elias", "Eliseu"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 99,
+    "question": "Complete: 'As misericórdias do Senhor renovam-se cada...'",
+    "options": ["Ano", "Mês", "Semana", "Manhã"],
+    "correct": 3,
+    "difficulty": "easy",
+    "category": "Fundamentos"
+  },
+  {
+    "id": 100,
+    "question": "Ao chegar aqui, qual medalha o jogador merece?",
+    "options": ["Obreiro", "Missionário", "Teólogo", "Apóstolo (quase lá!)"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  }
+,
+  {
+    "id": 101,
+    "question": "Qual é a definição de 'Caminhos do Coração' apresentada no epílogo do devocional?",
+    "options": ["Um livro de poesias", "Um mapa espiritual traçado com fé e experiência", "Um guia de viagens", "Um manual de regras"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Devocional"
+  },
+  {
+    "id": 102,
+    "question": "Quem foi o rei que pediu sabedoria a Deus em vez de riqueza ou vida longa?",
+    "options": ["Saul", "Davi", "Salomão", "Ezequias"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 103,
+    "question": "Na visão da Missão Peru, o que começou em 1993 é descrito como:",
+    "options": ["Um evento passageiro", "O início de algo eterno", "Um projeto de férias", "Apenas uma ideia"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Missão Peru"
+  },
+  {
+    "id": 104,
+    "question": "Qual destes é um benefício de ser um 'Assinante Mantenedor' no Clube?",
+    "options": ["Descontos em lojas", "Acesso a relatórios mensais direto do campo", "Ganhar um telemóvel", "Nenhum benefício"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 105,
+    "question": "Quem foi a mulher que disse: 'Onde quer que tu fores, irei eu'?",
+    "options": ["Noemi", "Rute", "Orfa", "Ester"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 106,
+    "question": "O que o bónus de moedas por 'Streak' incentiva no comportamento do usuário?",
+    "options": ["Pressa", "Fidelidade e constância diária", "Gastar dinheiro", "Competição agressiva"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 107,
+    "question": "Qual apóstolo foi exilado na ilha de Patmos, onde escreveu o Apocalipse?",
+    "options": ["Paulo", "Pedro", "João", "André"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 108,
+    "question": "Segundo o devocional, onde o coração do homem encontra repouso?",
+    "options": ["Nas riquezas", "No coração de Deus", "No sucesso", "No isolamento"],
+    "correct": 1,
+    "difficulty": "hard",
+    "category": "Devocional"
+  },
+  {
+    "id": 109,
+    "question": "Qual o nome da cidade onde as muralhas caíram após o povo rodear por 7 dias?",
+    "options": ["Jericó", "Ai", "Betel", "Gibeão"],
+    "correct": 0,
+    "difficulty": "easy",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 110,
+    "question": "A medalha '🔥 Apóstolo' é desbloqueada com quantos pontos?",
+    "options": ["50", "75", "100", "500"],
+    "correct": 2,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 111,
+    "question": "Quem foi o profeta que confrontou o rei Acabe e a rainha Jezabel?",
+    "options": ["Eliseu", "Isaías", "Elias", "Amós"],
+    "correct": 2,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 112,
+    "question": "O que a Missão Peru entende por 'Caminhada em Oração' (Mês 3)?",
+    "options": ["Um ritual", "Diálogo íntimo com Deus e busca pela Sua vontade", "Falar sozinho", "Pedir apenas bens materiais"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Devocional"
+  },
+  {
+    "id": 113,
+    "question": "Qual o principal objetivo dos e-books oferecidos no Clube Missionário?",
+    "options": ["Entretenimento apenas", "Edificação e capacitação teológica", "Venda comercial", "Decoração digital"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 114,
+    "question": "Quem era o 'Discípulo Amado' mencionado no Evangelho de João?",
+    "options": ["Pedro", "João", "Tiago", "Judas"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 115,
+    "question": "Qual o tema de Maio (Mês 5) que incentiva ações de bondade?",
+    "options": ["Fé", "Amor ao Próximo em Ação", "Oração", "Jejum"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Devocional"
+  },
+  {
+    "id": 116,
+    "question": "A quem Jesus disse: 'Necessário vos é nascer de novo'?",
+    "options": ["Zaqueu", "Nicodemos", "Pilatos", "Herodes"],
+    "correct": 1,
+    "difficulty": "medium",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 117,
+    "question": "Qual o valor da 'Vida Extra' em moedas no App?",
+    "options": ["100", "150", "200", "500"],
+    "correct": 1,
+    "difficulty": "easy",
+    "category": "Clube Missionário"
+  },
+  {
+    "id": 118,
+    "question": "Qual o nome do pai de João Batista?",
+    "options": ["Zacarias", "Zebedeu", "José", "Joaquim"],
+    "correct": 0,
+    "difficulty": "hard",
+    "category": "Bíblia Geral"
+  },
+  {
+    "id": 119,
+    "question": "Em 'Caminhos do Coração', o silêncio de Deus é visto como:",
+    "options": ["Abandono", "Oportunidade de ouvir a Sua voz no íntimo", "
