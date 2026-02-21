@@ -47,7 +47,10 @@
     <div id="projeto" class="section">
         <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
             <h2 class="text-[#E8B923] text-xl font-bold mb-4 italic text-justify">Nossa Jornada Missionária</h2>
-            <p class="text-sm text-gray-200 leading-relaxed mb-4">Desde de quando Deus nos chamou, para cumprir o "IDE", estamos envolvidos com o Reino de Deus, e por 2 oportunidades que nos permitiu em 1999 e 2008, levamos a Palavra ao Peru, pois acreditamos, quero deixar essa frase "Fomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil,e Nas Naçoes".</p>
+            <p class="text-sm text-gray-200 leading-relaxed mb-4 text-justify">
+                "Fomos chamados por Deus para atender ao apelo daqueles que clamam por um socorro da parte de Deus, seja no Brasil e nas Nações." 
+                Desde 1999 e 2008, levamos a Palavra ao Peru, cumprindo o IDE.
+            </p>
             <button onclick="showSection('clube')" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-[10px] uppercase">Ver Cursos e E-books</button>
         </div>
     </div>
@@ -56,24 +59,24 @@
         <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center shadow-2xl">
             <span id="mes-label" class="bg-[#15803D] text-[10px] px-4 py-1 rounded-full uppercase italic">Janeiro</span>
             <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Caminhos do Coração</h2>
-            <div id="dev-conteudo" class="my-6 space-y-4"></div>
-            <button onclick="compartilhar()" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-xs">📲 COMPARTILHAR MEDITAÇÃO</button>
+            <div id="dev-conteudo" class="my-6 space-y-6 text-justify text-sm leading-relaxed"></div>
+            <button onclick="compartilhar()" class="w-full bg-[#15803D] py-3 rounded-xl font-bold text-xs uppercase">📲 Compartilhar Meditação</button>
         </div>
     </div>
 
     <div id="quiz" class="section text-center">
-        <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30">
+        <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30 shadow-2xl">
             <h2 id="medalha" class="text-[#E8B923] font-black text-xl mb-4 uppercase tracking-tighter">Iniciante</h2>
             <div id="pergunta" class="text-lg font-bold mb-6 text-justify italic">Carregando perguntas...</div>
             <div id="alternativas" class="space-y-3"></div>
             <div class="mt-8 pt-6 border-t border-white/10">
-                <button onclick="usarVidaExtra()" class="w-full bg-red-900/40 border border-red-500 py-3 rounded-xl text-[10px] font-bold uppercase">❤️ Comprar Vida (150 moedas)</button>
+                <button onclick="usarVidaExtra()" class="w-full bg-red-900/40 border border-red-500 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest">❤️ Comprar Vida (150 moedas)</button>
             </div>
         </div>
     </div>
 
     <div id="clube" class="section text-center">
-        <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6">
+        <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] mb-6 shadow-2xl">
             <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
         </div>
         <div class="space-y-4">
@@ -81,46 +84,41 @@
                 <span class="font-bold text-[#E8B923]">Cursos & E-books</span>
                 <span>🔒</span>
             </div>
-            <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black text-xs">ASSINE PARA LIBERAR TUDO</button>
+            <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black text-xs shadow-lg uppercase">Assine para Liberar Tudo</button>
         </div>
     </div>
-<div id="doar" class="section p-6 max-w-md mx-auto text-center">
-    <div class="mb-8">
-        <h2 class="text-[#E8B923] text-2xl font-black uppercase italic tracking-tighter">Semente Missionária</h2>
-        <p class="text-xs text-gray-400 mt-2">Sua contribuição sustenta a Missão Peru</p>
-    </div>
 
-    <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl mb-6">
-        <h3 class="text-white font-bold mb-2">Ser Apoiador Mensal</h3>
-        <p class="text-[10px] text-gray-200 mb-4 italic">Compromisso de fidelidade por 12 meses para manter o campo missionário e este App.</p>
-        
-        <a href="LINK_DO_SEU_FORMULARIO_AQUI" target="_blank" class="block w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs shadow-lg active:scale-95 transition-all">
-            📝 CLIQUE PARA CADASTRAR
-        </a>
-    </div>
-
-    <div class="flex items-center gap-4 my-6 opacity-30">
-        <div class="h-[1px] bg-white flex-1"></div>
-        <span class="text-[10px] font-bold">OU</span>
-        <div class="h-[1px] bg-white flex-1"></div>
-    </div>
-
-    <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
-        <h3 class="text-gray-300 text-sm font-bold mb-4 italic">Doar agora, única vez?</h3>
-        
-        <div class="bg-black/40 p-4 rounded-2xl border-dashed border border-white/20 mb-4">
-            <p class="text-[9px] text-[#E8B923] font-bold uppercase mb-1">Chave PIX (CPF)</p>
-            <p class="text-lg font-mono font-bold text-white">05475258856</p>
+    <div id="doar" class="section p-6 max-w-md mx-auto text-center">
+        <div class="mb-8">
+            <h2 class="text-[#E8B923] text-2xl font-black uppercase italic tracking-tighter">Semente Missionária</h2>
+            <p class="text-xs text-gray-400 mt-2">Sua contribuição sustenta a Missão Peru</p>
         </div>
 
-        <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada! Deus abençoe sua oferta única.')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase hover:bg-[#15803D]/10 transition-all">
-            COPIAR CHAVE PIX
-        </button>
-    </div>
+        <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl mb-6">
+            <h3 class="text-white font-bold mb-2">Ser Apoiador Mensal</h3>
+            <p class="text-[10px] text-gray-200 mb-4 italic">Compromisso de fidelidade por 12 meses para manter o campo missionário e este App.</p>
+            <a href="https://forms.gle/SEU_LINK_AQUI" target="_blank" class="block w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs shadow-lg active:scale-95 transition-all">
+                📝 CLIQUE PARA CADASTRAR
+            </a>
+        </div>
 
-    <p class="mt-8 text-[9px] text-gray-500 italic">"Deus ama ao que dá com alegria." - 2 Coríntios 9:7</p>
-</div>
-    
+        <div class="flex items-center gap-4 my-6 opacity-30">
+            <div class="h-[1px] bg-white flex-1"></div>
+            <span class="text-[10px] font-bold">OU</span>
+            <div class="h-[1px] bg-white flex-1"></div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-gray-300 text-sm font-bold mb-4 italic">Doar agora, única vez?</h3>
+            <div class="bg-black/40 p-4 rounded-2xl border-dashed border border-white/20 mb-4">
+                <p class="text-[9px] text-[#E8B923] font-bold uppercase mb-1">Chave PIX (CPF)</p>
+                <p class="text-lg font-mono font-bold text-white">05475258856</p>
+            </div>
+            <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada!')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase hover:bg-[#15803D]/10">
+                COPIAR CHAVE PIX
+            </button>
+        </div>
+        <p class="mt-8 text-[9px] text-gray-500 italic">"Deus ama ao que dá com alegria." - 2 Coríntios 9:7</p>
     </div>
 
   </main>
@@ -129,7 +127,6 @@
   <audio id="audioWrong" src="assets/audio/wrong.mp3"></audio>
 
   <script>
-    // VARIÁVEIS DO QUIZ
     let perguntas = [];
     let index = 0;
     let pontuacao = 0;
@@ -137,20 +134,30 @@
     let streak = 0;
     let vidas = 3;
 
-    // DEVOCIONAL JANEIRO
+    // BANCO DE DADOS DEVOCIONAL (Organizado e sem erros)
     const devocionais = {
-      "01": { nome: "Janeiro - Recomeço e Esperança", dias: {
-          "01": { t: "Novo Começo", i:"Feliz Ano Novo! Hoje, ao abrirmos a primeira página de um novo calendário, somos presenteados com a sensação palpável de um novo começo. É um convite para deixar para trás o que passou e abraçar o futuro com um coração cheio de esperança, sabendo que Deus nos oferece sempre a chance de recomeçar."  e: "Misericórdias renovadas,A Bíblia está repleta de histórias de recomeços. Deus é um Deus de novas oportunidades. Em Lamentações 3:22-23, somos lembrados que "as misericórdias do Senhor são a causa de não sermos consumidos, porque as suas misericórdias não têm fim; renovam-se cada manhã". Este novo ano é uma manifestação dessa misericórdia renovada. Ele nos convida a depositar nossa confiança Nele, crendo que Seus planos para nós são de paz e esperança (Jeremias 29:11)", a:"Aplicação: Como você pode encarar este novo ano como uma oportunidade dada por Deus? Quais áreas da sua vida você gostaria de ver renovadas? Reserve um momento para refletir sobre as lições do ano que passou e identifique uma ou duas coisas que você deseja fazer diferente, com a ajuda de Deus, neste novo ciclo." r: "Apocalipse 21:5a", f: "Cada amanhecer é um convite.",c:"Chamado à Ação: Inicie este dia com uma oração, entregando seus planos e sonhos para este novo ano a Deus. Peça a Ele que renove suas forças e sua esperança, e que o guie em cada passo do caminho." }
-        }}
+      "01": { 
+        nome: "Janeiro - Recomeço e Esperança", 
+        dias: {
+          "01": { 
+            t: "A Promessa de um Novo Começo", 
+            intro: "Feliz Ano Novo! Hoje, ao abrirmos a primeira página de um novo calendário, somos presenteados com um novo começo.",
+            ensino: "Deus é um Deus de novas oportunidades. Lamentações 3:22-23 diz que suas misericórdias renovam-se cada manhã.",
+            ref: "Apocalipse 21:5a",
+            frase: "Cada amanhecer é um convite.",
+            acao: "Inicie este dia com uma oração entregando seus planos a Deus."
+          }
+        }
+      }
     };
 
     function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if(target) target.classList.add('active');
       window.scrollTo(0,0);
     }
 
-    // LÓGICA DO QUIZ
     async function initQuiz() {
       try {
         const res = await fetch("questions.json");
@@ -169,7 +176,7 @@
       q.options.forEach((opt, i) => {
         const btn = document.createElement("button");
         btn.innerText = opt;
-        btn.className = "quiz-btn w-full py-4 rounded-xl font-bold text-sm shadow-lg";
+        btn.className = "quiz-btn w-full py-4 rounded-xl font-bold text-sm shadow-lg mb-2";
         btn.onclick = () => verificarResposta(i, q.correct);
         container.appendChild(btn);
       });
@@ -219,13 +226,35 @@
       const hoje = new Date();
       const dia = String(hoje.getDate()).padStart(2, '0');
       const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+      
       const m = devocionais[mes] || devocionais["01"];
       const d = m.dias[dia] || m.dias["01"];
-      document.getElementById('dev-conteudo').innerHTML = `<p class="italic text-gray-300">"${d.e}"</p><p class="text-[#E8B923] font-bold text-xs mt-4">REF: ${d.r}</p>`;
+      
+      document.getElementById('mes-label').innerText = m.nome;
+      document.getElementById('dia-titulo').innerText = d.t;
+      document.getElementById('dev-conteudo').innerHTML = `
+        <p class="text-gray-300 italic mb-4">"${d.intro}"</p>
+        <div class="bg-black/20 p-4 rounded-xl border-l-4 border-[#E8B923]">
+            <p class="text-xs font-bold text-[#E8B923] mb-2 uppercase tracking-widest">Ensino:</p>
+            <p>${d.ensino}</p>
+        </div>
+        <p class="text-[#E8B923] font-bold text-center text-xs mt-4">REFERÊNCIA: ${d.ref}</p>
+        <div class="bg-[#15803D]/10 p-4 rounded-xl text-center italic font-serif">
+            "${d.frase}"
+        </div>
+        <div class="mt-4 p-4 border border-white/10 rounded-xl bg-white/5 text-xs italic text-gray-400">
+            ${d.acao}
+        </div>
+      `;
+      window.cur = d;
+    }
+
+    function compartilhar() {
+      const msg = `*Devocional Missão Peru*%0A%0A*${window.cur.t}*%0A%0A✨ "${window.cur.frase}"%0A%0ALeia completo no App: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
+      window.open(`https://api.whatsapp.com/send?text=${msg}`);
     }
 
     window.onload = () => { initQuiz(); initDevocional(); };
   </script>
 </body>
 </html>
-
