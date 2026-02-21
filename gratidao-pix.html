@@ -3,40 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oferta Confirmada | Missão Peru</title>
+<title>Oferta Missionária | Missão Peru</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#000814] text-white flex items-center justify-center min-h-screen p-6">
 
-<div class="max-w-md w-full bg-white/5 p-8 rounded-3xl border border-[#E8B923]/40 text-center shadow-2xl animate-pulse">
+<div class="max-w-md w-full bg-white/5 p-8 rounded-3xl border border-[#E8B923]/40 text-center shadow-2xl">
 
 <div class="text-6xl mb-4">🙏</div>
 
 <h1 class="text-[#E8B923] text-2xl font-black uppercase mb-4">
-Oferta Confirmada!
+Realize sua Oferta via PIX
 </h1>
 
-<p class="text-gray-300 text-sm mb-6 leading-relaxed">
-Sua oferta via PIX foi registrada como uma semente missionária.
-Você está participando diretamente da obra em Tacna – Peru.
+<p class="text-gray-300 text-sm mb-6">
+Use a chave abaixo para concluir sua oferta missionária:
 </p>
 
-<div class="bg-[#15803D] p-4 rounded-xl mb-6 text-xs font-bold">
-Que o Senhor multiplique sua generosidade!
+<!-- CHAVE PIX -->
+<div class="bg-[#E8B923] text-[#000814] p-4 rounded-xl font-mono font-bold text-lg tracking-widest mb-4">
+05475258856
 </div>
 
-<p class="italic text-[#E8B923] text-xs mb-6">
-"Quem semeia com generosidade também colherá generosamente."
-<br>— 2 Coríntios 9:6
-</p>
+<button 
+onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada!');"
+class="w-full bg-[#15803D] py-3 rounded-xl font-bold uppercase text-xs shadow-lg mb-6">
+📋 COPIAR CHAVE PIX
+</button>
+
+<!-- CONTADOR DE APOIADORES -->
+<div class="bg-white/10 p-4 rounded-xl mb-6">
+<p class="text-xs uppercase text-gray-400 mb-1">Apoiadores até agora</p>
+<p id="contador" class="text-2xl font-black text-[#E8B923]">0</p>
+</div>
+
+<!-- BOTÃO CONFIRMAÇÃO -->
+<button 
+onclick="confirmarPagamento()" 
+class="w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg mb-6">
+✅ JÁ REALIZEI O PAGAMENTO
+</button>
+
+<!-- ORAÇÃO PERSONALIZADA -->
+<div id="mensagemOracao" class="hidden bg-[#15803D] p-5 rounded-2xl text-sm leading-relaxed mb-6">
+🙏 <b>Oração por Você:</b><br><br>
+Senhor, abençoa este coração generoso.  
+Multiplica seus recursos, fortalece sua casa  
+e faz prosperar tudo aquilo que ele colocar nas Tuas mãos.  
+Que esta semente produza frutos eternos.  
+Em nome de Jesus, amém.
+</div>
 
 <a href="index.html"
-class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-bold uppercase text-xs shadow-lg">
+class="block w-full bg-black py-3 rounded-xl font-bold uppercase text-xs shadow-lg">
 VOLTAR AO APP
 </a>
 
 </div>
+
+<script>
+let apoiadores = localStorage.getItem("apoiadores");
+if(!apoiadores){
+    apoiadores = 37; // número inicial simbólico
+}
+document.getElementById("contador").innerText = apoiadores;
+
+function confirmarPagamento(){
+    apoiadores++;
+    localStorage.setItem("apoiadores", apoiadores);
+    document.getElementById("contador").innerText = apoiadores;
+    document.getElementById("mensagemOracao").classList.remove("hidden");
+    alert("Obrigado por sustentar a missão! 🙏");
+}
+</script>
 
 </body>
 </html>
