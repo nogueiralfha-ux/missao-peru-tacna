@@ -1,4 +1,4 @@
-const CACHE_NAME = "missao-peru-v2"; // mude versão sempre que atualizar
+const CACHE_NAME = "missao-peru-v3";// mude versão sempre que atualizar
 
 const urlsToCache = [
   "/",
