@@ -7,103 +7,74 @@
     
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#15803D">
-    <link rel="apple-touch-icon" href="logo-missao-peru.png">
-    <link rel="icon" type="image/png" href="logo-missao-peru.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: system-ui, sans-serif; background: #000814; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: system-ui, sans-serif; background: #000814; color: white; overflow-x: hidden; }
         .section { display: none; padding-bottom: 100px; }
         .active { display: block; animation: fadeIn 0.3s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         #navbar { position: fixed; bottom: 0; left: 0; right: 0; background: #000814; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; padding: 12px 5px; z-index: 50; }
-        .nav-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; color: rgba(255,255,255,0.5); transition: 0.3s; width: 18%; }
+        .nav-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; color: rgba(255,255,255,0.5); width: 18%; }
         .nav-btn.active-nav { color: #E8B923; }
         .nav-btn span { font-size: 8px; font-weight: 900; text-transform: uppercase; }
         .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 20px; }
-        .quiz-btn { background: #0074D9; width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="bg-[#000814]">
+<body>
 
 <header class="p-6 text-center border-b border-white/5">
-    <div class="inline-block p-1 rounded-full bg-gradient-to-r from-[#15803D] to-[#E8B923] mb-2">
-        <img src="logo-missao-peru.png" alt="Logo" class="w-20 h-20 rounded-full border-2 border-[#000814]">
-    </div>
-    <h1 class="text-xl font-black italic text-[#E8B923] uppercase tracking-tighter">Missão Peru</h1>
+    <img src="logo-missao-peru.png" alt="Logo" class="w-20 h-20 rounded-full mx-auto mb-2 border-2 border-[#E8B923]">
+    <h1 class="text-xl font-black italic text-[#E8B923] uppercase">Missão Peru</h1>
     <div class="flex justify-center gap-4 mt-2 text-[10px] font-bold text-white/40">
-        <span id="moedas">🪙 0</span>
-        <span id="vidas">❤️ 3</span>
-        <span id="pontos">🏆 0</span>
+        <span id="moedas">🪙 0</span> <span id="vidas">❤️ 3</span> <span id="pontos">🏆 0</span>
     </div>
 </header>
 
 <main class="max-w-md mx-auto p-4">
     <div id="home" class="section active text-center">
         <div class="card mb-6 shadow-2xl">
-            <h2 class="text-[#E8B923] text-lg font-black uppercase italic mb-4 tracking-widest">Apresentação</h2>
-            <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                <p>O Missão Peru é um chamado para conectar corações à obra missionária em Tacna.</p>
-                <p class="text-[#E8B923] font-bold italic">"Este não é apenas um espaço digital; é um altar virtual de compromisso."</p>
-            </div>
+            <h2 class="text-[#E8B923] font-black uppercase mb-4 tracking-widest">Apresentação</h2>
+            <p class="text-sm text-gray-300">Conectando corações à obra missionária em Tacna.</p>
         </div>
-        <button onclick="showSection('projeto')" class="w-full bg-[#15803D] text-white py-4 rounded-xl font-black uppercase text-xs shadow-lg">
-            Como Instalar o App
-        </button>
+        <button onclick="showSection('projeto')" class="w-full bg-[#15803D] py-4 rounded-xl font-black text-xs uppercase">Como Instalar o App</button>
     </div>
 
     <div id="palavra" class="section text-center">
         <div class="bg-gradient-to-b from-[#15803D]/20 to-transparent p-6 rounded-3xl border border-[#15803D]/30 mb-6">
             <h2 class="text-[#E8B923] text-2xl font-black italic">Palavra do Dia</h2>
-            <p id="dev-data" class="text-[10px] text-white/50 tracking-widest uppercase font-bold">Carregando...</p>
+            <p id="dev-data" class="text-[10px] text-white/50 uppercase font-bold tracking-widest"></p>
         </div>
         <div class="space-y-4 text-left mb-6">
-            <div class="card border-l-4 border-[#E8B923]">
-                <h3 id="dev-tema" class="text-[#E8B923] font-black uppercase text-sm mb-2 italic"></h3>
-                <p id="dev-intro" class="text-xs text-gray-300"></p>
-            </div>
+            <div class="card border-l-4 border-[#E8B923]"><h3 id="dev-tema" class="text-[#E8B923] font-black uppercase text-sm mb-2 italic"></h3><p id="dev-intro" class="text-xs text-gray-300"></p></div>
             <div class="card"><p id="dev-ensino" class="text-xs text-gray-300"></p></div>
             <div class="card"><p id="dev-aplicacao" class="text-xs text-gray-300"></p></div>
-            <div class="bg-[#E8B923] p-6 rounded-2xl text-[#000814] shadow-xl text-center">
-                <p id="dev-versiculo" class="font-black italic text-lg leading-tight mb-2"></p>
-                <p id="dev-ref" class="text-[10px] font-bold uppercase tracking-widest opacity-70"></p>
-            </div>
+            <div class="bg-[#E8B923] p-6 rounded-2xl text-[#000814] shadow-xl text-center"><p id="dev-versiculo" class="font-black italic text-lg leading-tight mb-2"></p><p id="dev-ref" class="text-[10px] font-bold uppercase opacity-70"></p></div>
         </div>
-        <button onclick="compartilharDevocional()" class="w-full bg-[#25D366] text-white py-4 rounded-xl font-black uppercase text-xs shadow-lg flex items-center justify-center gap-2">
-            📲 COMPARTILHAR NO WHATSAPP
-        </button>
+        <button onclick="compartilharDevocional()" class="w-full bg-[#25D366] py-4 rounded-xl font-black text-xs uppercase flex items-center justify-center gap-2">📲 COMPARTILHAR</button>
     </div>
 
     <div id="projeto" class="section text-center">
-        <h2 class="text-[#E8B923] text-xl font-black uppercase mb-6">Como Instalar</h2>
+        <h2 class="text-[#E8B923] font-black uppercase mb-6">Instalação</h2>
         <div class="space-y-4 text-left">
-            <div class="card">
-                <h3 class="text-[#E8B923] font-bold text-sm mb-2">🤖 ANDROID (CHROME)</h3>
-                <p class="text-xs text-gray-300">Toque nos <b>três pontinhos (⋮)</b> e selecione <b>"Instalar aplicativo"</b>.</p>
-            </div>
-            <div class="card">
-                <h3 class="text-[#E8B923] font-bold text-sm mb-2">🍎 IPHONE (SAFARI)</h3>
-                <p class="text-xs text-gray-300">Toque em <b>Compartilhar</b> e escolha <b>"Adicionar à Tela de Início"</b>.</p>
-            </div>
+            <div class="card"><h3 class="text-[#E8B923] font-bold text-sm mb-2">🤖 ANDROID</h3><p class="text-xs text-gray-300">Toque em (⋮) e selecione <b>"Instalar aplicativo"</b>.</p></div>
+            <div class="card"><h3 class="text-[#E8B923] font-bold text-sm mb-2">🍎 IPHONE</h3><p class="text-xs text-gray-300">Toque em <b>Compartilhar</b> e escolha <b>"Adicionar à Tela de Início"</b>.</p></div>
         </div>
-        <button onclick="showSection('home')" class="mt-8 w-full bg-white/10 py-3 rounded-xl font-bold text-xs">VOLTAR</button>
+        <button onclick="showSection('home')" class="mt-8 w-full bg-white/10 py-3 rounded-xl font-bold text-xs uppercase">VOLTAR</button>
     </div>
 
     <div id="doar" class="section text-center">
         <div class="card mb-6">
             <h2 class="text-[#E8B923] font-black uppercase mb-2">Apoie a Missão</h2>
-            <p class="text-xs text-gray-400">Sua contribuição sustenta o trabalho em Tacna:</p>
+            <p class="text-xs text-gray-400 font-bold uppercase">Sua semente frutifica em Tacna</p>
         </div>
         <div class="grid gap-4">
-            <button onclick="window.location.href='https://wa.me/5591981881471?text=Olá! Quero fazer uma oferta única. Minha chave PIX é o CPF: 05475258856'" 
+            <button onclick="window.location.href='https://wa.me/5591981881471?text=Olá! Quero fazer uma oferta única via PIX. Chave: 05475258856'" 
                     class="bg-[#E8B923] text-[#000814] p-6 rounded-2xl font-black text-sm shadow-lg">
-                🎁 OFERTA ÚNICA (PIX)<br><span class="text-[10px] font-bold">Chave: 05475258856</span>
+                🎁 OFERTA ÚNICA (PIX)<br><span class="text-[10px] font-bold uppercase">Chave: 05475258856</span>
             </button>
             <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScvuR68w5vxsJDBw-Y1ZuXDv78AO7UO-rTYtd3rHEoguYHpjg/viewform?usp=dialog'" 
                     class="bg-[#15803D] text-white p-6 rounded-2xl font-black text-sm shadow-lg">
-                🤝 APOIO MENSAL<br><span class="text-[10px] font-bold">Torne-se um mantenedor fiel</span>
+                🤝 APOIO MENSAL<br><span class="text-[10px] font-bold uppercase">Torne-se um mantenedor fiel</span>
             </button>
         </div>
     </div>
@@ -124,11 +95,10 @@
 </nav>
 
 <script>
-    let devocionais = [];
     async function carregarDevocional() {
         try {
             const resp = await fetch('devocionais.json');
-            devocionais = await resp.json();
+            const devocionais = await resp.json();
             const hoje = new Date();
             const inicio = new Date(hoje.getFullYear(), 0, 0);
             const dia = Math.floor((hoje - inicio) / 86400000) - 1;
@@ -140,14 +110,14 @@
             document.getElementById("dev-aplicacao").innerText = d.aplicacao;
             document.getElementById("dev-versiculo").innerText = `"${d.versiculo}"`;
             document.getElementById("dev-ref").innerText = d.referencia;
-        } catch(e) { console.error("Erro ao carregar dados:", e); }
+        } catch(e) { console.error(e); }
     }
 
     function compartilharDevocional() {
         const tema = document.getElementById("dev-tema").innerText;
         const verso = document.getElementById("dev-versiculo").innerText;
         const ref = document.getElementById("dev-ref").innerText;
-        const msg = encodeURIComponent(`*Devocional Missão Peru*\n\n*Tema:* ${tema}\n\n${verso}\n(${ref})\n\nLeia o devocional completo no App: ${window.location.href}`);
+        const msg = encodeURIComponent(`*Devocional Missão Peru*\n\n*Tema:* ${tema}\n\n${verso}\n(${ref})\n\nLeia mais no App: ${window.location.href}`);
         window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
     }
 
@@ -155,16 +125,12 @@
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-nav'));
-        event.currentTarget.classList.add('active-nav');
+        const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(id));
+        if (activeBtn) activeBtn.classList.add('active-nav');
         window.scrollTo(0,0);
     }
 
-    window.onload = () => { 
-        carregarDevocional(); 
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(err => console.log(err));
-        }
-    };
+    window.onload = () => { carregarDevocional(); };
 </script>
 </body>
 </html>
