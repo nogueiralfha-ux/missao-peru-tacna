@@ -1,18 +1,11 @@
-function compartilharDevocional() {
-    // Busca os textos diretamente dos elementos da tela
-    const tema = document.getElementById("dev-tema").innerText;
-    const versiculo = document.getElementById("dev-versiculo").innerText;
-    const referencia = document.getElementById("dev-ref").innerText;
-    const linkApp = window.location.href; 
-
-    // Monta a mensagem formatada para o WhatsApp
-    const mensagem = `*Devocional Missão Peru* 🇵🇪\n\n` +
-                     `*Tema:* ${tema}\n\n` +
-                     `${versiculo}\n` +
-                     `(_${referencia}_)\n\n` +
-                     `📖 Leia o devocional completo no App:\n${linkApp}`;
-
-    // Abre o WhatsApp com a mensagem pronta
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
+function ativarNotificacoes() {
+  Notification.requestPermission().then(p => {
+    if (p === "granted") {
+      document.getElementById("notif-banner").classList.add("hidden");
+      new Notification("Missão Peru", { 
+        body: "Lembretes ativados!", 
+        icon: "logo-missao-peru.png" 
+      });
+    }
+  });
 }
