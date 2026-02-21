@@ -18,12 +18,11 @@
         .section { display: none; padding-bottom: 100px; }
         .active { display: block; animation: fadeIn 0.3s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .quiz-btn { background: #0074D9; width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; transition: 0.3s; }
-        .quiz-btn:hover { background: #39CCCC; }
-        #navbar { position: fixed; bottom: 0; left: 0; right: 0; background: #000814; border-t: 1px solid #15803D; display: flex; justify-content: space-around; padding: 12px 5px; z-index: 50; }
-        .nav-btn { display: flex; flex-direction: column; align-items: center; color: rgba(255,255,255,0.5); width: 18%; }
+        #navbar { position: fixed; bottom: 0; left: 0; right: 0; background: #000814; border-top: 1px solid #15803D; display: flex; justify-content: space-around; padding: 12px 5px; z-index: 50; }
+        .nav-btn { display: flex; flex-direction: column; align-items: center; color: rgba(255,255,255,0.5); width: 16%; }
         .nav-active { color: #E8B923 !important; }
-        .nav-btn span { font-size: 8px; font-weight: 900; text-transform: uppercase; text-align: center; line-height: 1; }
+        .nav-btn span { font-size: 8px; font-weight: 900; text-transform: uppercase; text-align: center; line-height: 1.2; }
+        .quiz-btn { background: #0074D9; width: 100%; padding: 1rem; border-radius: 0.75rem; font-weight: bold; margin-bottom: 0.5rem; transition: 0.3s; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -44,10 +43,9 @@
                 <h2 class="text-[#E8B923] text-xl font-black uppercase mb-6 italic">Apresentação</h2>
                 <div class="text-sm text-gray-200 leading-relaxed text-justify space-y-4 mb-8">
                     <p>Missão Peru é mais do que um aplicativo — é um chamado.</p>
-                    <p>Aqui você acompanha projetos, intercede e se envolve com aquilo que o Senhor está fazendo em Tacna.</p>
+                    <p>Aqui você acompanha projetos, intercede e se envolve com o que o Senhor está fazendo em Tacna.</p>
                     <p class="font-bold italic text-[#E8B923] text-center">Este não é apenas um espaço digital. É um altar virtual de compromisso.</p>
                 </div>
-                
                 <div id="notif-banner" class="mb-6 p-4 bg-[#E8B923]/10 border border-[#E8B923]/30 rounded-2xl hidden">
                     <p class="text-[10px] font-bold uppercase text-[#E8B923] mb-2">🔔 Receber Alerta Diário?</p>
                     <button onclick="ativarNotificacoes()" class="w-full bg-[#E8B923] text-[#000814] py-2 rounded-lg font-black text-[10px] uppercase">ATIVAR NOTIFICAÇÕES</button>
@@ -75,76 +73,53 @@
                     <p id="dev-versiculo" class="font-black italic text-lg mb-1"></p>
                     <p id="dev-ref" class="text-xs font-bold uppercase opacity-70"></p>
                 </div>
-                <div class="bg-[#15803D] p-6 rounded-2xl shadow-lg">
-                    <h4 class="font-black text-xs uppercase mb-2">🙏 Chamado à Ação</h4>
-                    <p id="dev-chamado" class="text-sm"></p>
-                </div>
                 <button onclick="compartilharDevocional()" class="w-full bg-[#25D366] text-white py-4 rounded-xl font-black text-[11px] uppercase flex justify-center items-center gap-2 shadow-lg">
-                    <span>📲</span> COMPARTILHAR NO WHATSAPP
+                    📲 COMPARTILHAR NO WHATSAPP
                 </button>
             </div>
         </div>
 
         <div id="quiz" class="section text-center">
-            <div class="w-full bg-white/10 h-2 rounded-full mb-6 overflow-hidden border border-white/5">
-                <div id="progresso-barra" class="bg-[#E8B923] h-full transition-all duration-500" style="width: 0%"></div>
-            </div>
             <div class="bg-white/5 p-6 rounded-3xl border border-[#E8B923]/30 shadow-2xl">
                 <h2 id="medalha" class="text-[#E8B923] font-black text-xl mb-4 uppercase italic">Iniciante</h2>
                 <div id="pergunta" class="text-lg font-bold mb-6 italic leading-tight">Carregando desafios...</div>
                 <div id="alternativas" class="space-y-3"></div>
-                <div class="mt-4 text-[10px] text-white/50 uppercase font-bold">Questão <span id="pergunta-atual">0</span> de <span id="total-perguntas">0</span></div>
                 <div class="mt-6 space-y-2 border-t border-white/10 pt-4">
                     <button onclick="pularPergunta()" class="w-full bg-white/10 border border-white/20 py-3 rounded-xl text-[10px] font-bold uppercase">⏭️ Pular (50 moedas)</button>
-                    <button onclick="usarVidaExtra()" class="w-full bg-red-900/40 border border-red-500 py-3 rounded-xl text-[10px] font-bold uppercase">❤️ Comprar Vida (150 moedas)</button>
                 </div>
             </div>
         </div>
 
         <div id="doar" class="section text-center">
             <div class="bg-gradient-to-b from-[#15803D]/30 to-transparent p-6 rounded-3xl border border-[#15803D]/50 mb-8">
-                <h2 class="text-[#E8B923] text-2xl font-black uppercase italic mb-1">Semente Missionária</h2>
-                <p class="text-[10px] text-white/50 uppercase font-bold italic">Sustentando a Obra em Tacna</p>
+                <h2 class="text-[#E8B923] text-2xl font-black uppercase italic mb-1">Apoio Missionário</h2>
             </div>
             <div class="space-y-6">
-                <div class="bg-gradient-to-br from-[#15803D] to-[#000814] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl relative">
-                    <h3 class="text-white text-xl font-black italic mb-2 uppercase">Apoio Mensal</h3>
-                    <p class="text-xs text-gray-200 mb-6 italic">Compromisso de fidelidade ministerial.</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScvuR68w5vxsJDBw-Y1ZuXDv78AO7UO-rTYtd3rHEoguYHpjg/viewform?usp=sharing" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs">🤝 FAZER MEU COMPROMISSO</a>
+                <div class="bg-[#15803D] p-6 rounded-3xl border-2 border-[#E8B923] shadow-2xl">
+                    <h3 class="text-white text-xl font-black mb-2 uppercase italic">Apoio Mensal</h3>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScvuR68w5vxsJDBw-Y1ZuXDv78AO7UO-rTYtd3rHEoguYHpjg/viewform?usp=sharing" target="_blank" class="block w-full bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs">🤝 FAZER COMPROMISSO</a>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl shadow-xl">
-                    <h3 class="text-[#E8B923] text-sm font-black mb-4 italic uppercase">Oferta Única (Pix)</h3>
-                    <p class="text-xl font-mono font-bold text-white mb-4 tracking-widest">05475258856</p>
-                    <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada!'); showSection('gratidao')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase italic">📋 COPIAR PIX E FINALIZAR</button>
+                <div class="bg-white/5 p-6 rounded-3xl border border-white/10">
+                    <h3 class="text-[#E8B923] text-sm font-black mb-2 italic uppercase">Oferta Única (Pix)</h3>
+                    <p class="text-xl font-mono font-bold mb-4">05475258856</p>
+                    <button onclick="navigator.clipboard.writeText('05475258856'); alert('Chave PIX copiada!')" class="w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl text-[10px] font-bold uppercase">📋 COPIAR CHAVE PIX</button>
                 </div>
             </div>
         </div>
 
         <div id="projeto" class="section text-center">
-            <div class="bg-gradient-to-b from-[#15803D]/30 to-transparent p-6 rounded-3xl border border-[#15803D]/50 mb-8">
-                <h2 class="text-[#E8B923] text-2xl font-black uppercase italic mb-1 tracking-tighter">Instalação</h2>
-                <p class="text-[10px] text-white/50 uppercase font-bold">Passo a Passo do Aplicativo</p>
-            </div>
+            <h2 class="text-[#E8B923] text-xl font-black uppercase mb-6 italic">Instalação</h2>
             <div class="space-y-4 text-left">
                 <div class="bg-white/5 p-5 rounded-2xl border border-white/10">
-                    <h3 class="text-[#E8B923] font-bold text-sm mb-3 italic">🤖 ANDROID (CHROME)</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed">1. Toque nos <b>três pontinhos (⋮)</b>.<br>2. Escolha <b>"Instalar aplicativo"</b>.</p>
+                    <h3 class="text-[#E8B923] font-bold text-sm mb-2 italic">🤖 ANDROID</h3>
+                    <p class="text-xs text-gray-300">Toque em (⋮) e escolha "Instalar aplicativo".</p>
                 </div>
                 <div class="bg-white/5 p-5 rounded-2xl border border-white/10">
-                    <h3 class="text-[#E8B923] font-bold text-sm mb-3 italic">🍎 IPHONE (SAFARI)</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed">1. Toque no ícone de <b>Compartilhar</b> (seta para cima).<br>2. Escolha <b>"Adicionar à Tela de Início"</b>.</p>
+                    <h3 class="text-[#E8B923] font-bold text-sm mb-2 italic">🍎 IPHONE</h3>
+                    <p class="text-xs text-gray-300">Toque em "Compartilhar" e escolha "Adicionar à Tela de Início".</p>
                 </div>
-                <button onclick="showSection('home')" class="w-full bg-[#15803D] text-white py-4 rounded-xl font-black uppercase text-xs mt-6">VOLTAR AO INÍCIO</button>
             </div>
-        </div>
-
-        <div id="gratidao" class="section text-center">
-            <div class="bg-white/5 p-8 rounded-3xl border border-[#E8B923]/30 shadow-2xl mt-10">
-                <div class="text-6xl mb-4">🙏</div>
-                <h2 class="text-[#E8B923] text-2xl font-black uppercase italic mb-4">Obrigado, Missionário!</h2>
-                <p class="text-sm text-gray-200 italic mb-8">"Cada um dê conforme determinou em seu coração..." (2 Coríntios 9:7)</p>
-                <button onclick="showSection('home')" class="w-full bg-[#15803D] text-white py-4 rounded-xl font-black uppercase text-xs">VOLTAR AO INÍCIO</button>
-            </div>
+            <button onclick="showSection('home')" class="w-full bg-[#15803D] text-white py-4 rounded-xl font-black uppercase text-xs mt-8">VOLTAR</button>
         </div>
     </main>
 
@@ -153,7 +128,7 @@
         <button onclick="showSection('projeto')" class="nav-btn"><span class="text-xl">🛠️</span><span>Projeto</span></button>
         <button onclick="showSection('palavra')" class="nav-btn"><span class="text-xl">📖</span><span>Palavra</span></button>
         <button onclick="showSection('quiz')" class="nav-btn"><span class="text-xl">🎯</span><span>Desafio</span></button>
-        <button onclick="showSection('doar')" class="nav-btn"><span class="text-xl">❤️</span><span class="font-black text-[#15803D] bg-white/10 px-1 rounded">DOAR</span></button>
+        <button onclick="showSection('doar')" class="nav-btn"><span class="text-xl">❤️</span><span>Doar</span></button>
     </nav>
 
     <script>
@@ -161,13 +136,9 @@
 
         function showSection(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            const target = document.getElementById(id);
-            if(target) target.classList.add('active');
-            
+            document.getElementById(id).classList.add('active');
             document.querySelectorAll('.nav-btn span:last-child').forEach(s => s.classList.remove('nav-active'));
-            if(event && event.currentTarget) {
-                event.currentTarget.querySelector('span:last-child').classList.add('nav-active');
-            }
+            if(event && event.currentTarget) event.currentTarget.querySelector('span:last-child').classList.add('nav-active');
             window.scrollTo(0,0);
         }
 
@@ -175,18 +146,13 @@
             try {
                 const res = await fetch('questions.json');
                 perguntas = await res.json();
-                perguntas = perguntas.sort(() => Math.random() - 0.5);
                 if (perguntas.length > 0) mostrarPergunta();
-            } catch(e) { document.getElementById("pergunta").innerText = "Erro ao carregar desafios."; }
+            } catch(e) { console.error("Erro no quiz"); }
         }
 
         function mostrarPergunta() {
             const q = perguntas[index];
-            if(!q) { 
-                document.getElementById("pergunta").innerText = "Parabéns! Você completou tudo.";
-                document.getElementById("alternativas").innerHTML = "";
-                return; 
-            }
+            if(!q) return;
             document.getElementById("pergunta").innerText = q.question;
             const container = document.getElementById("alternativas");
             container.innerHTML = "";
@@ -196,24 +162,14 @@
                 btn.onclick = () => verificarResposta(i, q.correct);
                 container.appendChild(btn);
             });
-            document.getElementById("progresso-barra").style.width = (index / perguntas.length * 100) + "%";
-            document.getElementById("pergunta-atual").innerText = index + 1;
-            document.getElementById("total-perguntas").innerText = perguntas.length;
         }
 
         function verificarResposta(r, c) {
             if (r === c) { pontuacao++; moedas += 10; index++; mostrarPergunta(); }
-            else { vidas--; if (vidas <= 0) { alert("Vidas esgotadas!"); resetar(); } }
-            atualizarStatus();
-        }
-
-        function resetar() { index = 0; pontuacao = 0; moedas = 0; vidas = 3; mostrarPergunta(); atualizarStatus(); }
-        function atualizarStatus() {
+            else { vidas--; if (vidas <= 0) { alert("Vidas esgotadas!"); index = 0; vidas = 3; mostrarPergunta(); } }
             document.getElementById("moedas").innerText = moedas;
             document.getElementById("vidas").innerText = vidas;
             document.getElementById("pontos").innerText = pontuacao;
-            let m = pontuacao >= 50 ? "🥇 Missionário" : (pontuacao >= 10 ? "🥉 Discípulo" : "Iniciante");
-            document.getElementById("medalha").innerText = m;
         }
 
         async function carregarDevocional() {
@@ -229,37 +185,18 @@
                 document.getElementById("dev-aplicacao").innerText = d.aplicacao;
                 document.getElementById("dev-versiculo").innerText = `"${d.versiculo}"`;
                 document.getElementById("dev-ref").innerText = d.referencia;
-                document.getElementById("dev-chamado").innerText = d.chamado;
-            } catch (e) { console.log("Erro no Devocional."); }
+            } catch (e) { console.error("Erro no devocional"); }
         }
 
         function compartilharDevocional() {
             const tema = document.getElementById("dev-tema").innerText;
-            const versiculo = document.getElementById("dev-versiculo").innerText;
+            const verso = document.getElementById("dev-versiculo").innerText;
             const ref = document.getElementById("dev-ref").innerText;
-            const msg = `*Devocional Missão Peru* 🇵🇪\n\n*Tema:* ${tema}\n\n${versiculo}\n(_${ref}_)\n\n📖 Leia completo no App:\n${window.location.href}`;
+            const msg = `*Devocional Missão Peru*\n\n*Tema:* ${tema}\n\n${verso}\n(_${ref}_)\n\nLeia no App:\n${window.location.href}`;
             window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        function ativarNotificacoes() {
-            Notification.requestPermission().then(p => {
-                if (p === "granted") {
-                    document.getElementById("notif-banner").classList.add("hidden");
-                    new Notification("Missão Peru", { body: "Lembretes diários ativados!" });
-                }
-            });
-        }
-
-        window.onload = () => { 
-            initQuiz(); 
-            carregarDevocional(); 
-            if ("Notification" in window && Notification.permission === "default") {
-                document.getElementById("notif-banner").classList.remove("hidden");
-            }
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('sw.js').catch(err => console.log(err));
-            }
-        };
+        window.onload = () => { initQuiz(); carregarDevocional(); };
     </script>
 </body>
 </html>
