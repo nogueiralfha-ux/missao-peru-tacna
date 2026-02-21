@@ -15,112 +15,107 @@
 
   <div class="bg-gradient-to-b from-[#15803D] to-[#0A2540] py-8 text-center shadow-lg">
     <img src="logo-missao-peru.png" alt="Missão Peru" class="mx-auto w-32 h-32 rounded-full border-4 border-[#E8B923] mb-4 shadow-2xl">
-    <h1 class="text-2xl font-bold text-[#E8B923]">Missão Peru - Tacna</h1>
-    <p class="text-xs text-white/70 uppercase tracking-widest">Tecnologia a Serviço do Reino</p>
+    <h1 class="text-3xl font-bold text-[#E8B923]">Missão Peru</h1>
+    <p class="text-[10px] text-white/70 uppercase tracking-widest mt-2">Tecnologia a Serviço do Reino</p>
   </div>
 
-  <div class=<div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-4 z-50 shadow-2xl">
-  <button onclick="showSection('home')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">INÍCIO</span></button>
-  <button onclick="showSection('projeto')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">PROJETO</span></button>
-  <button onclick="showSection('palavra')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">BÍBLIA</span></button>
-  <button onclick="showSection('clube')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">CLUBE</span></button>
-  <button onclick="showSection('doar')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">DOAR</span></button>
-</div>
+  <div class="fixed bottom-0 left-0 right-0 bg-[#0A2540] border-t border-[#15803D] flex justify-around py-4 z-50 shadow-2xl">
+    <button onclick="showSection('home')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">INÍCIO</span></button>
+    <button onclick="showSection('projeto')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">PROJETO</span></button>
+    <button onclick="showSection('palavra')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">BÍBLIA</span></button>
+    <button onclick="showSection('clube')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-[#E8B923]">CLUBE</span></button>
+    <button onclick="showSection('doar')" class="flex flex-col items-center"><span class="text-[9px] font-bold text-white/70">DOAR</span></button>
   </div>
 
   <div id="home" class="section active p-6 max-w-2xl mx-auto">
-    <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-center">
-      <h2 class="text-[#E8B923] text-xl font-bold mb-4">Bem-vindo à Missão</h2>
-      <p class="text-sm leading-relaxed text-gray-300 mb-6">Estamos em Tacna para transformar vidas através do Evangelho. Una-se a nós nesta jornada!</p>
-      <a href="https://wa.me/?text=Conheça a Missão Peru: https://nogueiralfha-ux.github.io/missao-peru-tacna/" class="block w-full bg-[#15803D] py-4 rounded-xl font-bold text-xs uppercase shadow-lg">Compartilhar no WhatsApp</a>
+    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center shadow-xl">
+      <h2 class="text-[#E8B923] text-2xl font-bold mb-4 italic">Recomeço e Esperança</h2>
+      <p class="text-sm leading-relaxed text-gray-300 mb-8 italic">"As misericórdias do Senhor renovam-se cada manhã. Junte-se a nós nesta jornada."</p>
+      
+      <button onclick="showSection('projeto')" class="w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-sm mb-4 shadow-lg active:scale-95 transition-all">
+          📖 CONHEÇA NOSSOS PROJETOS
+      </button>
+      
+      <a href="https://wa.me/?text=Conheça a Missão Peru: https://nogueiralfha-ux.github.io/missao-peru-tacna/" class="block w-full border border-[#15803D] text-[#15803D] py-3 rounded-xl font-bold text-[10px] uppercase text-center">
+          📲 Compartilhar Aplicativo
+      </a>
     </div>
   </div>
 
-  <div id="doar" class="section p-6 max-w-md mx-auto text-center">
-    <h2 class="text-[#E8B923] text-xl font-bold mb-6">Semente Missionária</h2>
-    <div class="bg-[#15803D] p-6 rounded-3xl mb-4 shadow-xl">
-      <p class="text-[10px] uppercase font-bold text-white/80">Chave PIX (CPF)</p>
-      <p class="text-xl font-mono font-bold my-2">05475258856</p>
-      <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#0A2540] px-6 py-2 rounded-full font-bold text-xs mt-2">COPIAR CHAVE</button>
-    </div>
-    <img src="qr-pix.png" class="w-48 h-48 mx-auto bg-white p-2 rounded-2xl shadow-lg" alt="QR Code">
-    <p class="mt-4 text-xs text-gray-400 font-bold uppercase tracking-widest">Mês 4: Gratidão e Provisão</p>
-  </div>
-
-  <div id="oracao" class="section p-6 max-w-2xl mx-auto">
-    <h2 class="text-[#E8B923] text-xl font-bold mb-6 text-center">Clamor por Tacna</h2>
-    <div class="space-y-4">
-      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🙏 Pelas famílias Quéchua</div>
-      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🏠 Pela nova base em Tacna</div>
+  <div id="projeto" class="section p-6 max-w-2xl mx-auto">
+    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl">
+      <h2 class="text-[#E8B923] text-2xl font-bold mb-6 text-center italic text-justify">Nossa Jornada Missionária</h2>
+      <div class="space-y-4 text-sm text-gray-200 leading-relaxed">
+        <p>Desde 1993, a Missão Peru tem levado a luz do Evangelho para as nações. Com passagens marcantes em 1999 e 2008, nosso foco é a plantação de igrejas e o cuidado social.</p>
+        <p>Estamos construindo algo robusto: capacitação teológica, e-books e cursos para todos os que amam o campo missionário.</p>
+        <button onclick="showSection('clube')" class="w-full mt-6 bg-[#15803D] py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest">Ver Cursos e E-books</button>
+      </div>
     </div>
   </div>
-  <div id="clube" class="section p-6 max-w-2xl mx-auto">
-    <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] text-center mb-6 shadow-2xl">
-        <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
-        <p class="text-sm mt-2 text-white/90 leading-relaxed">Assine e libere acesso exclusivo a cursos de missões e nossa biblioteca de e-books.</p>
-    </div>
-
-    <div class="space-y-4">
-        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between items-center group active:bg-white/10 transition-all">
-            <div>
-                <p class="font-bold text-[#E8B923] text-lg">Cursos de Missões</p>
-                <p class="text-[10px] text-gray-400 italic">Estratégias e Treinamento Transcultural</p>
-            </div>
-            <span class="text-xl opacity-50">🔒</span>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex justify-between items-center group active:bg-white/10 transition-all">
-            <div>
-                <p class="font-bold text-[#E8B923] text-lg">Biblioteca de E-books</p>
-                <p class="text-[10px] text-gray-400 italic">Incluindo "Caminhos do Coração" (PDF)</p>
-            </div>
-            <span class="text-xl opacity-50">📚</span>
-        </div>
-    </div>
-
-    <div class="mt-8 bg-black/20 p-6 rounded-2xl border border-white/10 text-center">
-        <p class="text-xs text-gray-300 mb-4 italic">"Ao se tornar um assinante, você mantém este aplicativo no ar e investe diretamente no campo missionário."</p>
-        <button onclick="showSection('doar')" class="w-full bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-sm shadow-xl active:scale-95 transition-transform">
-            QUERO ME TORNAR UM MEMBRO
-        </button>
-    </div>
-</div>
 
   <div id="palavra" class="section p-4 max-w-2xl mx-auto">
     <div class="bg-white/5 border border-white/10 rounded-3xl p-6 shadow-2xl">
       <div class="text-center mb-6">
-        <span id="mes-label" class="bg-[#15803D] text-[10px] font-black px-4 py-1 rounded-full uppercase">Janeiro</span>
-        <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Devocional</h2>
+        <span id="mes-label" class="bg-[#15803D] text-[10px] font-black px-4 py-1 rounded-full uppercase italic">Janeiro</span>
+        <h2 id="dia-titulo" class="text-[#E8B923] text-2xl font-bold mt-4 italic">Caminhos do Coração</h2>
       </div>
       <div id="dev-conteudo" class="space-y-6"></div>
       <button onclick="compartilhar()" class="mt-8 w-full bg-[#15803D] py-4 rounded-xl font-bold text-xs uppercase shadow-lg">📲 Compartilhar Meditação</button>
     </div>
   </div>
 
-  <div id="quiz" class="section p-6 text-center">
-    <h2 class="text-[#E8B923] text-xl font-bold mb-6 italic">Desafio Bíblico</h2>
-    <div class="bg-white/10 p-8 rounded-3xl">
-      <p class="mb-6">Onde Deus chamou o irmão Antonio em 1997?</p>
-      <button onclick="alert('Correto! O Peru!')" class="w-full bg-white/10 py-3 mb-2 rounded-xl">Peru</button>
-      <button onclick="alert('Tente novamente!')" class="w-full bg-white/10 py-3 rounded-xl">Chile</button>
+  <div id="clube" class="section p-6 max-w-2xl mx-auto">
+    <div class="bg-gradient-to-br from-[#15803D] to-[#0A2540] p-6 rounded-3xl border-2 border-[#E8B923] text-center mb-6">
+        <h2 class="text-[#E8B923] text-2xl font-black uppercase italic">Clube Missionário</h2>
+        <p class="text-xs mt-2 italic">Acesso exclusivo a treinamentos e materiais digitais.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex justify-between items-center">
+            <div><p class="font-bold text-sm text-[#E8B923]">Cursos de Missões</p><p class="text-[9px] text-gray-500">Em breve: Novos módulos</p></div>
+            <span>🔒</span>
+        </div>
+        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl flex justify-between items-center">
+            <div><p class="font-bold text-sm text-[#E8B923]">Biblioteca E-books</p><p class="text-[9px] text-gray-500">Baixe "Caminhos do Coração"</p></div>
+            <span>📚</span>
+        </div>
+    </div>
+    <button onclick="showSection('doar')" class="w-full mt-6 bg-[#E8B923] text-[#0A2540] py-4 rounded-xl font-black uppercase text-xs">Assine para Liberar Tudo</button>
+  </div>
+
+  <div id="oracao" class="section p-6 max-w-2xl mx-auto">
+    <h2 class="text-[#E8B923] text-xl font-bold mb-6 text-center italic">Altar de Oração</h2>
+    <div class="space-y-4">
+      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🙏 Pelas famílias do Peru</div>
+      <div class="bg-white/5 p-4 rounded-xl border-l-4 border-[#15803D]">🏠 Pela expansão da obra</div>
     </div>
   </div>
 
+  <div id="doar" class="section p-6 max-w-md mx-auto text-center">
+    <h2 class="text-[#E8B923] text-2xl font-bold mb-6 italic">Apoie a Missão</h2>
+    <div class="bg-[#15803D] p-6 rounded-3xl mb-8 shadow-xl">
+      <p class="text-[10px] uppercase font-bold text-white/80 mb-2">Pix (CPF)</p>
+      <p class="text-xl font-mono font-bold mb-4">05475258856</p>
+      <button onclick="navigator.clipboard.writeText('05475258856'); alert('PIX Copiado!')" class="bg-white text-[#0A2540] px-6 py-2 rounded-full font-bold text-[10px] uppercase">Copiar Chave</button>
+    </div>
+    <a href="LINK_ASSINATURA" class="block w-full border-2 border-[#E8B923] text-[#E8B923] py-4 rounded-xl font-black uppercase text-sm shadow-lg">Assinar Mensalmente</a>
+  </div>
+
   <script>
-    // BASE DE DADOS
     const devocionais = {
       "01": {
         nome: "Janeiro - Recomeço e Esperança",
         dias: {
-          "01": { t: "A Promessa de um Novo Começo", e: "Deus nos oferece sempre a chance de recomeçar.", r: "Apocalipse 21:5a", f: "Em Cristo, cada amanhecer é um convite para um novo começo." },
-          "02": { t: "Semeando Esperança", e: "A esperança bíblica é uma confiança firme nas promessas de Deus.", r: "Jeremias 29:11", f: "A esperança em Deus é a âncora da alma." }
+          "01": { t: "A Promessa de um Novo Começo", e: "Deus nos oferece sempre a chance de recomeçar. Suas misericórdias renovam-se cada manhã.", r: "Apocalipse 21:5a", f: "Em Cristo, cada amanhecer é um convite para um novo começo." },
+          "02": { t: "Semeando Esperança no Coração", e: "A esperança bíblica é uma confiança firme nas promessas de Deus.", r: "Jeremias 29:11", f: "A esperança em Deus é a âncora da alma." }
         }
       }
     };
 
     function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if(target) target.classList.add('active');
+      window.scrollTo(0,0);
     }
 
     function initDevocional() {
@@ -133,15 +128,15 @@
       document.getElementById('mes-label').innerText = m.nome;
       document.getElementById('dia-titulo').innerText = d.t;
       document.getElementById('dev-conteudo').innerHTML = `
-        <p class="text-sm italic border-l-4 border-[#E8B923] p-4 bg-black/20">"${d.e}"</p>
-        <p class="text-center font-bold text-[#E8B923] text-xs">Ref: ${d.r}</p>
-        <div class="p-4 bg-[#15803D]/20 rounded-2xl text-center italic font-serif">"${d.f}"</div>
+        <div class="bg-black/30 p-5 rounded-2xl italic border-l-4 border-[#E8B923] text-sm leading-relaxed mb-4 text-justify">"${d.e}"</div>
+        <p class="text-center font-bold text-[#E8B923] text-xs">REF: ${d.r}</p>
+        <div class="p-6 bg-[#15803D]/20 rounded-2xl text-center italic font-serif mt-4 border border-white/5">"${d.f}"</div>
       `;
       window.cur = d;
     }
 
     function compartilhar() {
-      const msg = `*${window.cur.t}*%0A%0A"${window.cur.f}"%0A%0AConfira no App: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
+      const msg = `*Devocional Missão Peru*%0A%0A*${window.cur.t}*%0A%0A"${window.cur.f}"%0A%0AApp: https://nogueiralfha-ux.github.io/missao-peru-tacna/`;
       window.open(`https://api.whatsapp.com/send?text=${msg}`);
     }
 
@@ -149,5 +144,3 @@
   </script>
 </body>
 </html>
-
-
