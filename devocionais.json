@@ -21,7 +21,7 @@
     "frase": "A esperança em Deus é a âncora da alma em meio às tempestades da vida.",
     "chamado": "Identifique uma promessa bíblica específica hoje, medite nela e compartilhe-a com alguém que precise de encorajamento."
   },
-]
+
     "id": 3,
     "tema": "Deixando o Passado para Trás",
     "introducao": "Muitas vezes, o peso de erros e mágoas do passado nos impede de abraçar o novo de Deus. O início do ano é o momento ideal para liberar o que ficou para trás.",
@@ -75,9 +75,9 @@
     "versiculo": "Deem graças em todas as circunstâncias, pois esta é a vontade de Deus para vocês em Cristo Jesus.",
     "frase": "Um coração grato é um imã para milagres e um reflexo da bondade de Deus.",
     "chamado": "Reserve um momento hoje para agradecer por cinco bênçãos específicas e, se possível, expresse gratidão a alguém que Deus usou para abençoá-lo."
-  }
+  },
 
-,{
+{
     "id": 8,
     "tema": "A Paciência de Esperar no Tempo de Deus",
     "introducao": "No ritmo acelerado do mundo, queremos tudo para 'ontem'. No entanto, a jornada da fé nos ensina a virtude da paciência ao esperar pelas promessas divinas.",
@@ -219,8 +219,7 @@
     "versiculo": "Pedi, e dar-se-vos-á; buscai e encontrareis; batei, e abrir-se-vos-á.",
     "frase": "A oração é a chave que abre o coração de Deus e libera o Seu poder em nossas vidas.",
     "chamado": "Dedique um tempo extra hoje para adorar e interceder, experimentando a profundidade desse diálogo com o Pai."
-  }
-  ,
+  },
   {
     "id": 21,
     "tema": "A Fidelidade de Deus em Todas as Estações",
@@ -341,9 +340,7 @@
     "versiculo": "Porque eu bem sei os pensamentos que penso de vós, diz o Senhor; pensamentos de paz e não de mal.",
     "frase": "Com os olhos da fé, o futuro não é um abismo de incertezas, mas um horizonte de oportunidades divinas.",
     "chamado": "Faça uma oração de gratidão por este mês e consagre os meses seguintes a Deus, pedindo que Ele continue guiando seus caminhos."
-  }
-,
-  [
+  },
   {
     "id": 32,
     "tema": "A Semente Viva da Palavra",
@@ -651,8 +648,7 @@
     "versiculo": "Oh! Quanto amo a tua lei! É a minha meditação em todo o dia!",
     "frase": "O amor pela Palavra é uma chama que ilumina toda a jornada da fé.",
     "chamado": "Agradeça a Deus pelo acesso à Bíblia. Renove hoje seu compromisso de amá-la, estudá-la e vivê-la durante todo este ano."
-  }
-.
+  },
   {
     "id": 60,
     "tema": "O Convite à Intimidade na Oração",
@@ -729,9 +725,8 @@
     "versiculo": "Rendei graças ao Senhor, porque ele é bom, porque a sua misericórdia dura para sempre.",
     "frase": "Um coração grato é um jardim onde a alegria floresce e a presença de Deus habita.",
     "chamado": "Faça uma oração de encerramento listando as lições de Abril. Comprometa-se a levar adiante um coração grato pela provisão contínua de Deus."
-  }
-,
-    {
+  },
+  {
     "id": 121,
     "tema": "O Fundamento do Amor",
     "introducao": "Iniciamos Maio refletindo sobre o amor ao próximo. Para amarmos os outros, precisamos primeiro experimentar o amor de Deus.",
@@ -796,10 +791,9 @@
     "versiculo": "Combati o bom combate, acabei a carreira, guardei a fé.",
     "frase": "A fé que sobrevive aos desafios é uma fé pronta para voos ainda maiores.",
     "chamado": "Faça uma oração de gratidão pela fidelidade de Deus que te sustentou durante todo este mês."
-  }
-,
-    {
-    "id": 182,
+  },
+ {
+   "id": 182,
     "tema": "Criados com um Propósito Divino",
     "introducao": "Iniciamos Julho com a verdade de que não somos um acidente. Cada um de nós foi criado por Deus com um propósito específico e único.",
     "ensino": "Efésios 2:10 revela que somos feitura de Deus, criados para as boas obras que Ele preparou de antemão. Nosso valor reside em sermos criação amada do Pai.",
@@ -853,7 +847,7 @@
     "frase": "O legado de um coração perdoador é um rastro de luz que aponta para a graça infinita de Deus.",
     "chamado": "Consagre a Deus sua jornada contínua de reconciliação. Peça que Ele use sua vida para levar cura aos relacionamentos ao seu redor."
   },
-    {
+  {
     "id": 244,
     "tema": "A Videira Verdadeira",
     "introducao": "Iniciamos Setembro explorando o fruto do Espírito. Antes de olharmos para as virtudes, precisamos entender a fonte: nossa conexão com Jesus.",
@@ -963,6 +957,8 @@
     "frase": "No limiar do tempo, a gratidão pelo passado encontra a esperança no futuro.",
     "chamado": "Dedique os últimos momentos deste ano para agradecer. Entregue o novo ano a Deus, pedindo Sua direção constante."
   } 
+]
     
     
+
 
