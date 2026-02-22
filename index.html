@@ -139,11 +139,11 @@ class="w-full bg-[#15803D] text-white font-bold py-4 rounded-xl uppercase shadow
 onclick="navigator.clipboard.writeText('05475258856'); window.location.href='gratidao-pix.html';" 
 class="bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs shadow-lg w-full">
 🪙 OFERTA ÚNICA (PIX)
-</button>
-               <button 
-onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScyuR68w5vxsJDBw-YIzuXDv78AO7U0-rTYtd3rHEoguYHpjs/viewform?usp=dialog', '_blank')"
-class="bg-[#15803D] text-white py-4 rounded-xl font-bold uppercase text-xs shadow-lg w-full">
-  APOIAR 12 MESES
+  </button>
+    
+<button onclick="window.open('https://forms.gle/ZUi3vMAcYoZLeHui7', '_blank')"
+class="bg-[#15803D] text-white py-4 rounded-xl font-bold uppercase w-full">
+APOIAR 12 MESES
 </button>
             </div>
         </div>
@@ -253,10 +253,10 @@ function finalizarDesafio() {
   document.getElementById("quiz-container").innerHTML = `
     <h3 class="text-xl font-bold text-[#EBB923]">Desafio Concluído!</h3>
     <p class="text-white mt-4">Sua pontuação: ${pontuacao} / ${perguntas.length}</p>
-    <button onclick="iniciarDesafio()" 
-      class="mt-6 w-full bg-[#EBB923] text-black py-3 rounded-xl font-bold">
-      Refazer Desafio
-    </button>
+     <button onclick="iniciarDesafio()" 
+class="bg-green-600 text-white py-4 rounded-xl font-bold uppercase w-full">
+DESAFIO MISSIONÁRIO
+</button>
   `;
 }
 
@@ -282,6 +282,7 @@ if ("serviceWorker" in navigator) {
 </script>
 </body>
 </html>
+
 
 
 
