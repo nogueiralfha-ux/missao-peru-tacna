@@ -1,14 +1,12 @@
 const CACHE_NAME = "missao-peru-v3";// mude versão sempre que atualizar
-
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/manifest.json",
-  "/logo-missao-peru.png",
-  "/gratidao-pix.html",
-  "/gratidao-mensal.html"
+  "./",
+  "./index.html",
+  "./manifest.json",
+  "./logo-missao-peru.png",
+  "./gratidao-pix.html",
+  "./gratidao-mensal.html"
 ];
-
 // Instalar e forçar ativação imediata
 self.addEventListener("install", event => {
   self.skipWaiting();
