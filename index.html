@@ -153,7 +153,16 @@ class="bg-[#E8B923] text-[#000814] py-4 rounded-xl font-black uppercase text-xs 
             event.currentTarget.classList.add('nav-active');
             window.scrollTo(0,0);
         }
-        window.onload = () => { carregarDevocional(); };
+         window.onload = () => { carregarDevocional(); };
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const splash = document.getElementById("splash-screen");
+    if (splash) {
+      splash.style.opacity = "0";
+      setTimeout(() => splash.remove(), 600);
+    }
+  }, 1200);
+}); 
     </script>
 
 <script>
@@ -175,6 +184,7 @@ if ("serviceWorker" in navigator) {
     </script>
 </body>
 </html>
+
 
 
 
