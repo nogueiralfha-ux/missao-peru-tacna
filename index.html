@@ -190,9 +190,9 @@ class="bg-[#15803D] text-white py-4 rounded-xl font-bold uppercase text-xs shado
             event.currentTarget.classList.add('nav-active');
             window.scrollTo(0,0);
         }
-         window.onload = () => { carregarDevocional(); };
-window.addEventListener("load", function () {
-  setTimeout(function () {
+      window.addEventListener("load", function () {
+  carregarDevocional () ;
+          setTimeout(function () {
     const splash = document.getElementById("splash-screen");
     if (splash) {
       splash.style.opacity = "0";
@@ -282,12 +282,9 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+</body>
+</html>
 
-</body>
-</html>
-    </script>
-</body>
-</html>
 
 
 
